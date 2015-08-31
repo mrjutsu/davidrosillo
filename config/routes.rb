@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :subcategories
+  resources :contacts
+  resources :portfolios
+  resources :portfolio_categories
   resources :posts
   resources :categories
   resources :posts

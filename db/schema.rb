@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150831212542) do
+ActiveRecord::Schema.define(version: 20150831230827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,33 @@ ActiveRecord::Schema.define(version: 20150831212542) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "portfolio_categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "portfolio_categories_portfolios", id: false, force: :cascade do |t|
+    t.integer "portfolio_category_id", null: false
+    t.integer "portfolio_id",          null: false
+  end
+
+  create_table "portfolios", force: :cascade do |t|
+    t.string   "name"
+    t.string   "url"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "name"
     t.text     "body"
@@ -65,5 +92,15 @@ ActiveRecord::Schema.define(version: 20150831212542) do
 
   add_index "posts", ["category_id"], name: "index_posts_on_category_id", using: :btree
 
+  create_table "subcategories", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "subcategories", ["category_id"], name: "index_subcategories_on_category_id", using: :btree
+
   add_foreign_key "posts", "categories"
+  add_foreign_key "subcategories", "categories"
 end

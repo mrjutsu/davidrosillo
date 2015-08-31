@@ -1,13 +1,7 @@
 Rails.application.routes.draw do
-  resources :subcategories
-  resources :contacts
-  resources :portfolios
-  resources :portfolio_categories
-  resources :posts
-  resources :categories
-  resources :posts
-  resources :categories
-  resources :posts
+  resources :contacts, only: [:new,:create]
+  resources :portfolios, only: [:index,:show]
+  resources :posts, only: [:index,:show]
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,5 +1,11 @@
 class ContactsController < InheritedResources::Base
 
+	def new
+	end
+
+	def create
+	end
+
   private
 
     def contact_params

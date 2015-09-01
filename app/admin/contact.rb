@@ -1,17 +1,27 @@
 ActiveAdmin.register Contact do
 
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if resource.something?
-#   permitted
-# end
+	# permit_params :name, :email, :subject, :body
 
+	index title: "Contacts" do
+		selectable_column
+		id_column
+		column :email
+		column :subject
+		column :created_at
+		actions
+	end
+
+	filter :email
+	filter :subject
+
+	show title: "Contact" do
+		attributes_table do
+			row :id
+			row :created_at
+			row :email
+			row :subject
+			row :body
+		end
+	end
 
 end

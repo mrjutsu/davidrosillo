@@ -9,13 +9,13 @@ ActiveAdmin.register Subcategory do
 		column :created_at
 	end
 
-	filter name:
+	filter :name
 	filter :category
 
 	form html: { enctype: "multipart/form-data" } do |f|
-		f.inputs "Post" do
+		f.inputs "Subcategory" do
 			f.input :name
-			f.input :category, as: :select, collection: Category.all.map { |x| [x.name,x.id] }
+			f.input :category_id, as: :select, collection: Category.all.map { |x| [x.name,x.id] }
 		end
 		f.actions
 	end
@@ -25,7 +25,7 @@ ActiveAdmin.register Subcategory do
 			row :id
 			row :created_at
 			row :name
-			row :category
+			row :category_id
 		end
 	end
 

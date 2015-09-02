@@ -15,9 +15,9 @@ ActiveAdmin.register Post do
 
 	form html: { enctype: "multipart/form-data" } do |f|
 		f.inputs "Post" do
-			f.name
-			f.category, as: :select, collection: Category.all.map { |x| [x.name,x.id] }
-			f.body
+			f.input :name
+			f.input :category, as: :select, collection: Category.all.map { |x| [x.name,x.id] }
+			f.input :body
 		end
 		f.actions
 	end

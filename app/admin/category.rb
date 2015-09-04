@@ -11,7 +11,7 @@ ActiveAdmin.register Category do
 	filter :name
 
 	show title: "Category" do
-		attributs_table do
+		attributes_table do
 			row :id
 			row :name
 		end

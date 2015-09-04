@@ -5,13 +5,15 @@ ActiveAdmin.register Post do
 		selectable_column
 		id_column
 		column :name
-		column "Category" do
-			post.category.name
+		column "Category" do |p|
+			p.category.name
 		end
 		column :created_at
+		actions
 	end
 
 	filter :name
+	filter :category
 
 	form html: { enctype: "multipart/form-data" } do |f|
 		f.inputs @post do

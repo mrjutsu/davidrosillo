@@ -6,6 +6,7 @@ categories = [
 	{ name: "Life" },
 	{ name: "How To" },
 	{ name: "Games" },
+	{ name: "Opinion" },
 ]
 
 Category.create( categories )

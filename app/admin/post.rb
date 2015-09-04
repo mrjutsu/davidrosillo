@@ -19,7 +19,7 @@ ActiveAdmin.register Post do
 		f.inputs @post do
 			f.input :name
 			f.input :category, as: :select, collection: Category.all.map { |x| [x.name,x.id] }
-			f.input :body
+			f.input :body, as: :html_editor
 		end
 		f.actions
 	end
@@ -30,7 +30,9 @@ ActiveAdmin.register Post do
 			row :created_at
 			row :name
 			row :category
-			row :body
+			row "Body" do
+				raw post.body
+			end
 		end
 	end
 

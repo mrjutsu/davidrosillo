@@ -1,5 +1,5 @@
 ActiveAdmin.register Portfolio do
-	permit_params :name, :url, :description, :category_id, :subcategory_id
+	permit_params :name, :url, :description, :portfolio_categories, portfolio_category_ids: []
 
 	index title: "Portfolios" do
 		selectable_column
@@ -14,10 +14,12 @@ ActiveAdmin.register Portfolio do
 		f.inputs "Portfolio" do
 			f.input :name
 			f.input :url
-			f.input :category_id, as: :select, collection: Category.all.map { |x| [x.name,x.id] }
-			f.input :subcategory_id, as: :select, collection: Subcategory.all.map { |x| [x.name,x.id] }
+			# f.input :category_ids, as: :check_boxes, collection: Category.all.map { |x| [x.name,x.id] }
+			f.input :portfolio_category_ids, as: :check_boxes, collection: PortfolioCategory.all.map { |x| [x.name, x.id] }, checked: true
+			# f.input :subcategory_ids, as: :select, collection: Subcategory.all.map { |x| [x.name,x.id] }
 			f.input :description
 		end
+		f.actions
 	end
 
 	show title: "Portfolio" do

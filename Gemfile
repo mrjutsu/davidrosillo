@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'nested_form'
+gem 'active_admin_editor', github: 'mrjutsu/active_admin_editor'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

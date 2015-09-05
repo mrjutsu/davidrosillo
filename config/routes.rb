@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  get 'landing/index'
+  # get 'landing/index'
+
+  resources :landings, only: :index do
+  	collection do
+  		get :about
+  	end
+  end
 
   resources :contacts, only: [:new,:create]
   resources :portfolios, only: [:index,:show]

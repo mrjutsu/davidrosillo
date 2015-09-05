@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   # get 'landing/index'
 
   resources :landings, only: [:index], path: "/" do
-  	# collection do
-  		get :about, on: :collection, path: "/about"
-  	# end
+  	collection do
+  		get :about, path: "/about"
+  	end
   end
 
   resources :contacts, only: [:new,:create], path: "/contact"

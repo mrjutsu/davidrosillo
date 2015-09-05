@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   # get 'landing/index'
 
-  resources :landings, only: :index do
-  	collection do
-  		get :about
-  	end
+  resources :landings, only: [:index] do
+  	# collection do
+  		get :about, on: :collection
+  	# end
   end
 
   resources :contacts, only: [:new,:create]
@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   
-  root 'landing#index'
+  root 'landings#index'
 end

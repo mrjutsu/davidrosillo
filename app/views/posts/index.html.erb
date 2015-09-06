@@ -1,13 +1,20 @@
 <h1>Listing Posts</h1>
 
-<a href="javascript:;" id="filter-life">Life</a>
-<br>
-<a href="javascript:;" id="filter-ht">How To</a>
-<br>
-<a href="javascript:;" id="filter-opinion">Opinion</a>
-<br>
-<a href="javascript:;" id="filter-games">Games</a>
-<br>
+<%= form_tag( filter_posts_posts_path, remote: true, id: "filter-posts" ) do %>
+  <%= hidden_field_tag :authenticity_token, value: form_authenticity_token %>
+  <%= radio_button_tag :p_filter, 0, false, { id: "life" } %>
+  <label for="life">Life</label>
+  <br>
+  <%= radio_button_tag :p_filter, 1, false, { id: "how-to" } %>
+  <label for="how-to">How To</label>
+  <br>
+  <%= radio_button_tag :p_filter, 2, false, { id: "opinion" } %>
+  <label for="opinion">Opinion</label>
+  <br>
+  <%= radio_button_tag :p_filter, 3, false, { id: "games" } %>
+  <label for="games">Games</label>
+  <br>
+<% end %>
 
 <table>
   <thead>

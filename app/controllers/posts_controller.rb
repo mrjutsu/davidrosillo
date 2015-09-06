@@ -1,6 +1,10 @@
 class PostsController < InheritedResources::Base
 
 	def index
+		@posts = Post.all
+	end
+
+	def filter_posts
 		
 	end
 

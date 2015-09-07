@@ -7,6 +7,7 @@ class ContactsController < InheritedResources::Base
 	def create
 		@contact = Contact.new(contact_params)
 		if @contact.save
+			MyMailer.contact_mail(@contact).deliver_now
 			redirect_to root_path
 		else
 			redirect_to :back

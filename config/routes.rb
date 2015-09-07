@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :portfolios, only: [:index,:show], path: "/portfolio"
   resources :posts, only: [:index,:show], path: "/blog/" do
     collection do
-      post :filter_posts
+      post :index
     end
   end
   devise_for :admin_users, ActiveAdmin::Devise.config

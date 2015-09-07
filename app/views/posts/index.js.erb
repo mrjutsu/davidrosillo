@@ -1,3 +1,2 @@
-$("input").on("change",function(){
-	alert("czxczxczx");
-});
+$("#posts-div").empty();
+$("#posts-div").html("<%= escape_javascript(render partial: 'posts', collection: @posts, as: :post) %>");

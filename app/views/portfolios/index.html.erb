@@ -1,25 +1,18 @@
-<h1>Listing Portfolios</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Url</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @portfolios.each do |portfolio| %>
-      <tr>
-        <td><%= portfolio.name %></td>
-        <td><%= portfolio.url %></td>
-        <td><%= portfolio.description %></td>
-        <td><%= link_to 'Show', portfolio %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<section>
+  <% @portfolios.each do |portfolio| %>
+    <article>
+      <p>
+        <%= portfolio.name %>
+      </p>
+      <p>
+        <%= portfolio.url %>
+      </p>
+      <p>
+        <%= portfolio.description %>
+      </p>
+      <p>
+        <%= link_to 'Show', portfolio %>
+      </p>
+    </article>
+  <% end %>
+</section>

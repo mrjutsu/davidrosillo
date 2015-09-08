@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<title>David Rosillo</title>
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
@@ -10,13 +10,25 @@
 	</head>
 	<body>
 		<nav>
-			<h1>
-				<%= link_to 'David Rosillo', root_path %>
-			</h1>
-			<%= link_to 'Blog', posts_path %>
-			<%= link_to 'Portfolio', portfolios_path %>
-			<%= link_to 'About Me', about_landings_path %>
-			<%= link_to 'Contact', new_contact_path %>
+			<ul>
+				<li>
+					<h1>
+						<%= link_to 'David Rosillo', root_path %>
+					</h1>
+				</li>
+				<li>
+					<%= link_to 'Blog', posts_path %>
+				</li>
+				<li>
+					<%= link_to 'Portfolio', portfolios_path %>
+				</li>
+				<li>
+					<%= link_to 'About Me', about_landings_path %>
+				</li>
+				<li>
+					<%= link_to 'Contact', new_contact_path %>
+				</li>
+			</ul>
 		</nav>
 		<section class="left-info"></section>
 		<section class="content">

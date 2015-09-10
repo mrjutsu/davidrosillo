@@ -17,18 +17,18 @@
 							<%= link_to 'David Rosillo', root_path, class: "nav-a" %>
 						</h1>
 					</li>
-					<!-- <li>
+					<li>
 						<%= link_to 'Blog', posts_path, class: "nav-a"  %>
-					</li> -->
+					</li>
 					<li>
 						<%= link_to 'Portfolio', portfolios_path, class: "nav-a" %>
 					</li>
-					<!-- <li>
+					<li>
 						<%= link_to 'About Me', about_landings_path, class: "nav-a" %>
 					</li>
 					<li>
 						<%= link_to 'Contact', new_contact_path, class: "nav-a"  %>
-					</li> -->
+					</li>
 					<!-- <i class="fa fa-search"></i> -->
 				</ul>
 			</nav>
@@ -37,9 +37,15 @@
 			<div class="p-body">
 				<%= yield %>
 			</div>
-			<div class="recent-articles"><i class="fa fa-book"></i>&nbsp;&nbsp;Recent Posts
-				<hr>
-				<%= render partial: 'posts/recent_posts', collection: Post.recent, as: :post %>
+			<div class="recent-articles">
+				<div class="r-posts">
+					&nbsp;&nbsp;<i class="fa fa-book"></i>&nbsp;&nbsp;<span>Recent Posts</span>
+					<%= render partial: 'posts/recent_posts', collection: Post.recent, as: :post %>
+				</div>
+				<div class="r-categories">
+					&nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;<span>Categories</span>
+					<%= render partial: 'categories', collection: Category.all_cats, as: :category %>
+				</div>
 			</div>
 		</section>
 		<section class="post-content">

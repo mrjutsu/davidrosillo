@@ -1,8 +1,9 @@
 <article class="post">
+	<hr>
 	<h2>
 		<%= link_to post.name, post_path(post.id) %>
 	</h2>
-	<i class="fa fa-tags post-tags">
+	<i class="fa fa-tags post-tag">
 		<span>
 			<%= post.category.name %>
 		</span>
@@ -13,5 +14,4 @@
 	<p>
 		<%= link_to 'Read More', post_path(post.id) %>
 	</p>
-	<hr>
 </article>

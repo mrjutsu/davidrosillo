@@ -79,14 +79,15 @@ section {
 .content {
 	flex-wrap: wrap;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-around;
 	background-color: #e7e7e7;
 }
 	.p-body {
 		background-color: white;
-		width: 55vw;
+		width: 60vw;
 		margin-top: 2vh;
 		margin-bottom: 2vh;
+		margin-right: -4vw;
 		padding: 4vh 1vw;
 	}
 
@@ -124,29 +125,52 @@ section {
 			.filter-cats input {
 				display: inline;
 				margin: 0 3vw;
-				/*border-bottom-style: solid;
-				border-width: 1px;
-				border-color: grey;*/
 			}
 
 	.recent-articles {
-		width: 24vw;
-		background-color: white;
+		/*width: 25vw;
 		margin-top: 2vh;
 		margin-bottom: 2vh;
-		border-left-style: solid;
-		border-width: 1px;
-		border-color: grey;
-		padding: 3vh 1vw;
+		margin-left: -4vw;
+		padding: 3vh 1vw;*/
 	}
+
+		.recent-articles .r-posts {
+			background-color: white;
+			height: 50%;
+			width: 25vw;
+			margin-top: 2vh;
+			margin-bottom: 2vh;
+			margin-left: -4vw;
+			padding: 3vh 1vw;
+		}
+
+		.recent-articles .r-categories {
+			margin-top: 5vh;
+			background-color: white;
+			width: 25vw;
+			margin-top: 3vh;
+			margin-bottom: 2vh;
+			margin-left: -4vw;
+			padding: 3vh 1vw;
+		}
+
 		.recent-articles i {
 			color: black;
+		}
+
+		.recent-articles span {
+			font-size: 1.3rem;
+			font-weight: 400px;
 		}
 
 		.recent-articles h3 a {
 			color: black;
 			text-transform: capitalize;
 			text-align: justify;
+		}
+		.recent-articles h3 a:hover {
+			text-decoration: underline;
 		}
 
 /*

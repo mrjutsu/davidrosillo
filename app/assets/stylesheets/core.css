@@ -42,7 +42,7 @@ i {
 **********************************************
 */
 
-.left-content {
+/*.left-content {
 	top: 0;
 	left: 0;
 	position: fixed;
@@ -74,10 +74,6 @@ i {
 		background-color: #626266;
 	}
 
-	/*.social-links li:hover {
-		background-color: #626266;
-	}*/
-
 	.left-info-footer {
 		font-size: .7rem;
 		color: white;
@@ -97,3 +93,4 @@ i {
 	background-color: olive;
 }
 
+*/

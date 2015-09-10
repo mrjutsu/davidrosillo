@@ -9,58 +9,43 @@
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
 	<body>
-		<section class="my-info">
-			<div class="left-content">
-				<div class="my-image">
-					<img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/15161_10155006909055696_2809560357001748257_n.jpg?oh=94c7cab84966be273d141fb7fba995e9&oe=56757130&__gda__=1450264305_6aa1a66ec9eebd363bc9cbfdcf72d17a">
+		<section>
+			<nav>
+				<ul class="nav-btns">
+					<li>
+						<h1>
+							<%= link_to 'David Rosillo', root_path, class: "nav-a" %>
+						</h1>
+					</li>
+					<!-- <li>
+						<%= link_to 'Blog', posts_path, class: "nav-a"  %>
+					</li> -->
+					<li>
+						<%= link_to 'Portfolio', portfolios_path, class: "nav-a" %>
+					</li>
+					<!-- <li>
+						<%= link_to 'About Me', about_landings_path, class: "nav-a" %>
+					</li>
+					<li>
+						<%= link_to 'Contact', new_contact_path, class: "nav-a"  %>
+					</li> -->
+				</ul>
+			</nav>
+		</section>
+		<section>
+			<%= yield %>
+		</section>
+		<section>
+			<footer>
+				<div class="social-links">
+					<a href="https://github.com/mrjutsu" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+					<a href="https://co.linkedin.com/in/davidrosillo/en" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+					<a href="https://www.facebook.com/drosilloricardo" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+					<a href="https://twitter.com/MrJutsu" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+					<a href="https://instagram.com/mrjutsu/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
 				</div>
-				<nav>
-					<ul class="nav-btns">
-						<li>
-							<h1>
-								<%= link_to 'David Rosillo', root_path, class: "nav-a" %>
-							</h1>
-						</li>
-						<!-- <li>
-							<%= link_to 'Blog', posts_path, class: "nav-a"  %>
-						</li> -->
-						<li>
-							<%= link_to 'Portfolio', portfolios_path, class: "nav-a" %>
-						</li>
-						<!-- <li>
-							<%= link_to 'About Me', about_landings_path, class: "nav-a" %>
-						</li>
-						<li>
-							<%= link_to 'Contact', new_contact_path, class: "nav-a"  %>
-						</li> -->
-					</ul>
-				</nav>
-				<div class="d-social-links">
-					<ul class="social-links">
-						<li>
-							<a href="https://github.com/mrjutsu" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-						</li>
-						<li>
-							<a href="https://co.linkedin.com/in/davidrosillo/en" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
-						</li>
-						<li>
-							<a href="https://www.facebook.com/drosilloricardo" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
-						</li>
-						<li>
-							<a href="https://twitter.com/MrJutsu" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-						</li>
-						<li>
-							<a href="https://instagram.com/mrjutsu/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
-						</li>
-					</ul>
-				</div>
-				<div class="left-info-footer">
-					Copyright © <%= Time.now.year %>. David Rosillo.
-				</div>
-			</div>
-			<div class="content">
-				<%= yield %>
-			</div>
+				Copyright © <%= Time.now.year %>. David Rosillo.
+			</footer>
 		</section>
 	</body>
 </html>

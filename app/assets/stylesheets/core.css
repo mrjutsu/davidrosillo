@@ -85,8 +85,8 @@ section {
 	.p-body {
 		background-color: white;
 		width: 60vw;
-		margin-top: 2vh;
-		margin-bottom: 2vh;
+		margin-top: 3vh;
+		margin-bottom: 3vh;
 		margin-right: -4vw;
 		padding: 4vh 1vw;
 	}
@@ -128,12 +128,29 @@ section {
 			}
 
 	.recent-articles {
-		/*width: 25vw;
-		margin-top: 2vh;
-		margin-bottom: 2vh;
-		margin-left: -4vw;
-		padding: 3vh 1vw;*/
 	}
+
+		.recent-articles .about-me{
+			display: flex;
+			flex-direction: column;
+			background-color: white;
+			height: 50%;
+			width: 25vw;
+			margin-top: 3vh;
+			margin-bottom: 2vh;
+			margin-left: -4vw;
+			padding: 3vh 1vw;
+		}
+			.about-me img {
+				display: block;
+				border-radius: 15px;
+				width: 80%;
+				height: auto;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.social-links {}
 
 		.recent-articles .r-posts {
 			background-color: white;
@@ -176,6 +193,28 @@ section {
 /*
 **********************************************
 **********************************************
+			ASIDE STYLES
+**********************************************
+**********************************************
+*/
+
+/*.social-links {
+	margin: 20vh -5vw;
+}*/
+
+.social-links i {
+	color: black;
+}
+
+/*.social-links a {
+	display: block;
+	padding: 1vh .5vw;
+	margin-top: 1vh;
+}*/
+
+/*
+**********************************************
+**********************************************
 			FOOTER STYLES
 **********************************************
 **********************************************
@@ -188,10 +227,6 @@ section {
 	font-size: .6rem;
 	text-align: center;
 }
-	.social-links a {
-		display: inline;
-		margin: 0 5vw;
-	}
 	.copyright {
 		margin: 1vh 0;
 	}

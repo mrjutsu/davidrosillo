@@ -3,6 +3,7 @@ class LandingsController < ApplicationController
   	respond_to do |format|
 		format.html {
 			@posts = Post.all.order(created_at: :desc)
+			# @recent_posts = Post.find(:all, order: "id desc", limit: 5).reverse
 			render :index
 		}
 		format.js {

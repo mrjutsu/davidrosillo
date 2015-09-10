@@ -9,7 +9,7 @@
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
 	<body>
-		<section>
+		<section class="pre-content">
 			<nav>
 				<ul class="nav-btns">
 					<li>
@@ -29,13 +29,20 @@
 					<li>
 						<%= link_to 'Contact', new_contact_path, class: "nav-a"  %>
 					</li> -->
+					<!-- <i class="fa fa-search"></i> -->
 				</ul>
 			</nav>
 		</section>
-		<section>
-			<%= yield %>
+		<section class="content">
+			<div class="p-body">
+				<%= yield %>
+			</div>
+			<div class="recent-articles"><i class="fa fa-book"></i>&nbsp;&nbsp;Recent Posts
+				<hr>
+				<%= render partial: 'posts/recent_posts', collection: Post.recent, as: :post %>
+			</div>
 		</section>
-		<section>
+		<section class="post-content">
 			<footer>
 				<div class="social-links">
 					<a href="https://github.com/mrjutsu" target="_blank"><i class="fa fa-github fa-2x"></i></a>
@@ -44,7 +51,9 @@
 					<a href="https://twitter.com/MrJutsu" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
 					<a href="https://instagram.com/mrjutsu/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
 				</div>
-				Copyright © <%= Time.now.year %>. David Rosillo.
+				<div class="copyright">
+					Copyright © <%= Time.now.year %>. David Rosillo.
+				</div>
 			</footer>
 		</section>
 	</body>

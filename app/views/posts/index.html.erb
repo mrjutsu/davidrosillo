@@ -3,19 +3,14 @@
     <%= hidden_field_tag :authenticity_token, value: form_authenticity_token %>
     <%= radio_button_tag :p_filter, 1, true, { id: "life" } %>
     <label for="life">Life</label>
-    <br>
     <%= radio_button_tag :p_filter, 2, true, { id: "how-to" } %>
     <label for="how-to">How To</label>
-    <br>
     <%= radio_button_tag :p_filter, 3, true, { id: "games" } %>
     <label for="games">Games</label>
-    <br>
     <%= radio_button_tag :p_filter, 4, true, { id: "opinion" } %>
     <label for="opinion">Opinion</label>
-    <br>
     <%= radio_button_tag :p_filter, 0, true, { id: "all" } %>
     <label for="all">All</label>
-    <br>
   <% end %>
 </section>
 <section>

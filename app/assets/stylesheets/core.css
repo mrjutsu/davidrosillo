@@ -13,7 +13,14 @@
 /*REDISH = #541F14*/
 
 body {
+	margin: 0;
+	padding: 0;
 	font-size: 16px;
+}
+
+h1 {
+	display: inline;
+	font-size: 1rem;
 }
 
 a {
@@ -21,76 +28,147 @@ a {
 }
 
 ul {
-	padding-left: 0;
 	list-style-type: none;
 }
 
-ul > li {
-	padding: 1vh 0 1vh 40px;
-	/*padding-left: 40px;*/
+ul li {
+	display: inline;
 }
 
 i {
 	color: white;
 }
 
+section {
+	display: flex;
+	flex-direction: column;
+}
+
 /*
 **********************************************
 **********************************************
-			LEFT CONTENT STYLES
+			HEADER STYLES
 **********************************************
 **********************************************
 */
 
-/*.left-content {
-	top: 0;
-	left: 0;
-	position: fixed;
+
+.pre-content {
 	background-color: #020304;
-	width: 20vw;
-	height: 100vh;
+	flex-wrap: wrap;
 }
-
-	.my-image img {
-		display: block;
-		margin-top: 4vh;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: -3vh;
-		width: 60%;
-		height: auto;
-		border-radius: 20px;
+	.nav-btns li {
+		height: 100%;
+		padding: 16px 5vw;
 	}
-
 	.nav-a {
 		color: white;
 	}
-
-	.nav-btns li:first-child {
-		margin-bottom: -2vh;
-	}
-
 	.nav-btns li:hover:not(:first-child) {
 		background-color: #626266;
 	}
 
-	.left-info-footer {
-		font-size: .7rem;
-		color: white;
-		padding-top: 5vh;
-		margin-left: 15%;
-		margin-right: 15%;
-	}
-
+/*
+**********************************************
+**********************************************
+			BODY STYLES
+**********************************************
+**********************************************
+*/
 
 .content {
-	top: 0;
-	position: absolute;
-	padding-left: 1.5vw;
-	margin-left: 20vw;
-	padding-right: 2vw;
-	width: 76.5vw;
-	background-color: olive;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	background-color: #e7e7e7;
 }
+	.p-body {
+		background-color: white;
+		width: 55vw;
+		margin-top: 2vh;
+		margin-bottom: 2vh;
+		padding: 4vh 1vw;
+	}
 
+		.post-article {
+			text-align: justify;
+		}
+
+		.post-article h2 {
+			color: black;
+			display: inline;
+			text-transform: capitalize;
+		}
+		.post-article h2 a {
+			color: black;
+		}
+		.post-article i {
+			display: block;
+			font-size: .8.5rem;
+			color: black;
+			margin: 1% 0;
+		}
+		.post {
+			margin: 15px 0;
+		}
+		.post a {
+			color: blue;
+			opacity: 0.7;
+		}
+
+		.filter-cats {
+			display: block;
+			margin: 8vh 0;
+		}
+
+			.filter-cats input {
+				display: inline;
+				margin: 0 3vw;
+				/*border-bottom-style: solid;
+				border-width: 1px;
+				border-color: grey;*/
+			}
+
+	.recent-articles {
+		width: 24vw;
+		background-color: white;
+		margin-top: 2vh;
+		margin-bottom: 2vh;
+		border-left-style: solid;
+		border-width: 1px;
+		border-color: grey;
+		padding: 3vh 1vw;
+	}
+		.recent-articles i {
+			color: black;
+		}
+
+		.recent-articles h3 a {
+			color: black;
+			text-transform: capitalize;
+			text-align: justify;
+		}
+
+/*
+**********************************************
+**********************************************
+			FOOTER STYLES
+**********************************************
+**********************************************
 */
+
+.post-content {
+	padding: 1.5vh 0;
+	background-color: #020304;
+	color: white;
+	font-size: .6rem;
+	text-align: center;
+}
+	.social-links a {
+		display: inline;
+		margin: 0 5vw;
+	}
+	.copyright {
+		margin: 1vh 0;
+	}
+

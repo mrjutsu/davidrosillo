@@ -1,0 +1,9 @@
+<article class="recent-post">
+	<h3>
+		<%= link_to post.name, post_path(post.id) %>
+	</h3>
+	<span>
+		<%= post.body.truncate(200).html_safe %>
+	</span>
+</article>
+<hr>

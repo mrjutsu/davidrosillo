@@ -1,14 +1,14 @@
-<article>
+<article class="post post-<%= post.id %>">
 	<p>
 		<%= post.name %>
 	</p>
 	<p>
-		<%= post.body.html_safe %>
+		<%= post.body.truncate(500).html_safe %>
 	</p>
 	<p>
 		<%= post.category.name %>
 	</p>
 	<p>
-		<%= link_to 'Show', post %>
+		<%= link_to 'Read More', post %>
 	</p>
 </article>

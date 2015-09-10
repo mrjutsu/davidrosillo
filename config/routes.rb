@@ -17,6 +17,6 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   
-  # root 'landings#index'
-  root 'posts#index'
+  root 'landings#index'
+  # root 'blog#index'
 end

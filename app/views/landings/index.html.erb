@@ -1,3 +1,23 @@
-<h1>Landing#index</h1>
-<p>Find me in app/views/landing/index.html.erb</p>
-<p>asdsadsddsa</p>
+<div>
+  <%= form_tag( root_path, remote: true, id: "filter-posts" ) do %>
+    <%= hidden_field_tag :authenticity_token, value: form_authenticity_token %>
+    <%= radio_button_tag :p_filter, 1, true, { id: "life" } %>
+    <label for="life">Life</label>
+    <br>
+    <%= radio_button_tag :p_filter, 2, true, { id: "how-to" } %>
+    <label for="how-to">How To</label>
+    <br>
+    <%= radio_button_tag :p_filter, 3, true, { id: "games" } %>
+    <label for="games">Games</label>
+    <br>
+    <%= radio_button_tag :p_filter, 4, true, { id: "opinion" } %>
+    <label for="opinion">Opinion</label>
+    <br>
+    <%= radio_button_tag :p_filter, 0, true, { id: "all" } %>
+    <label for="all">All</label>
+    <br>
+  <% end %>
+</div>
+<div>
+  <%= render partial: 'posts/posts', collection: @posts, as: :post %>
+</div>

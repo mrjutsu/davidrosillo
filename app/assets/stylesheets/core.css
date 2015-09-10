@@ -1,0 +1,99 @@
+/*
+**********************************************
+**********************************************
+			GENERAL STYLES
+**********************************************
+**********************************************
+*/
+
+/*BLACK = #020304*/
+/*GREYISH = #938172*/
+/*DARK GREYISH = #626266*/
+/*MAROONISH = #CC9E61*/
+/*REDISH = #541F14*/
+
+body {
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+ul > li {
+	padding: 1vh 0 1vh 40px;
+	/*padding-left: 40px;*/
+}
+
+i {
+	color: white;
+}
+
+/*
+**********************************************
+**********************************************
+			LEFT CONTENT STYLES
+**********************************************
+**********************************************
+*/
+
+.left-content {
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-color: #020304;
+	width: 20vw;
+	height: 100vh;
+}
+
+	.my-image img {
+		display: block;
+		margin-top: 4vh;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: -3vh;
+		width: 60%;
+		height: auto;
+		border-radius: 20px;
+	}
+
+	.nav-a {
+		color: white;
+	}
+
+	.nav-btns li:first-child {
+		margin-bottom: -2vh;
+	}
+
+	.nav-btns li:hover:not(:first-child) {
+		background-color: #626266;
+	}
+
+	/*.social-links li:hover {
+		background-color: #626266;
+	}*/
+
+	.left-info-footer {
+		font-size: .7rem;
+		color: white;
+		padding-top: 5vh;
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+
+
+.content {
+	top: 0;
+	position: absolute;
+	padding-left: 1.5vw;
+	margin-left: 20vw;
+	padding-right: 2vw;
+	width: 76.5vw;
+	background-color: olive;
+}
+

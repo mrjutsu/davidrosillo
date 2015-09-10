@@ -13,4 +13,5 @@
  *= require normalize
  *= require active_admin/editor/wysiwyg
  *= require font-awesome
+ *= require core
  */

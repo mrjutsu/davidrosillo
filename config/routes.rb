@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :landings, only: [:index], path: "/" do
   	collection do
+      post :index
+      
   		get :about, path: "/about"
   	end
   end

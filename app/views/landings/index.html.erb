@@ -2,15 +2,15 @@
   <%= form_tag( root_path, remote: true, id: "filter-posts" ) do %>
     <%= hidden_field_tag :authenticity_token, value: form_authenticity_token %>
     <%= radio_button_tag :p_filter, 1, true, { id: "life" } %>
-    <label for="life">Life</label>
+    <label for="life" id="life-lb">Life</label>
     <%= radio_button_tag :p_filter, 2, true, { id: "how-to" } %>
-    <label for="how-to">How To</label>
+    <label for="how-to" id="how-to-lb" >How To</label>
     <%= radio_button_tag :p_filter, 3, true, { id: "games" } %>
-    <label for="games">Games</label>
+    <label for="games" id="games-lb" >Games</label>
     <%= radio_button_tag :p_filter, 4, true, { id: "opinion" } %>
-    <label for="opinion">Opinion</label>
+    <label for="opinion" id="opinion-lb" >Opinion</label>
     <%= radio_button_tag :p_filter, 0, true, { id: "all" } %>
-    <label for="all">All</label>
+    <label for="all" class="active" id="all-lb" >All</label>
   <% end %>
 </div>
 <div class="post-article">

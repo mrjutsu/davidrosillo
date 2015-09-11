@@ -1,0 +1,37 @@
+$(".post-article").empty();
+if ( <%= params[:p_filter] %> == "1" ) {
+	$("#life-lb").addClass("active");
+	$("#how-to-lb").removeClass("active");
+	$("#games-lb").removeClass("active");
+	$("#opinion-lb").removeClass("active");
+	$("#all-lb").removeClass("active");
+};
+if ( <%= params[:p_filter] %> == "2" ) {
+	$("#life-lb").removeClass("active");
+	$("#how-to-lb").addClass("active");
+	$("#games-lb").removeClass("active");
+	$("#opinion-lb").removeClass("active");
+	$("#all-lb").removeClass("active");
+};
+if ( <%= params[:p_filter] %> == "3" ) {
+	$("#life-lb").removeClass("active");
+	$("#how-to-lb").removeClass("active");
+	$("#games-lb").addClass("active");
+	$("#opinion-lb").removeClass("active");
+	$("#all-lb").removeClass("active");
+};
+if ( <%= params[:p_filter] %> == "4" ) {
+	$("#life-lb").removeClass("active");
+	$("#how-to-lb").removeClass("active");
+	$("#games-lb").removeClass("active");
+	$("#opinion-lb").addClass("active");
+	$("#all-lb").removeClass("active");
+};
+if ( <%= params[:p_filter] %> == "0" ) {
+	$("#life-lb").removeClass("active");
+	$("#how-to-lb").removeClass("active");
+	$("#games-lb").removeClass("active");
+	$("#opinion-lb").removeClass("active");
+	$("#all-lb").addClass("active");
+};
+$(".post-article").html("<%= escape_javascript(render partial: 'posts/posts', collection: @posts, as: :post) %>");

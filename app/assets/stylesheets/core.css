@@ -94,7 +94,6 @@ section {
 		.post-article {
 			text-align: justify;
 		}
-
 		.post-article h2 {
 			color: black;
 			display: inline;
@@ -110,7 +109,7 @@ section {
 			margin: 1% 0;
 		}
 		.post {
-			margin: 15px 0;
+			margin: 15px 10px;
 		}
 		.post a {
 			color: blue;
@@ -118,21 +117,34 @@ section {
 		}
 
 		.filter-cats {
-			display: block;
-			margin: 8vh 0;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			margin-top: 2vh;
+			margin-bottom: 8vh;
 		}
-
 			.filter-cats input {
+				display: none;
+			}
+			.filter-cats label {
 				display: inline;
-				margin: 0 3vw;
+				padding: 2vh 4vw;
+				border-color: #938172;
+				border-bottom-style: solid;
+				border-bottom-width: 4px;
+				cursor: pointer;
+			}
+			.filter-cats .active {
+				border-color: #541F14;
+			}
+			.filter-cats label:hover:not(.active) {
+				border-color: #541F14;
 			}
 
 	.recent-articles {
 	}
 
 		.recent-articles .about-me{
-			display: flex;
-			flex-direction: column;
 			background-color: white;
 			height: 50%;
 			width: 25vw;
@@ -141,16 +153,37 @@ section {
 			margin-left: -4vw;
 			padding: 3vh 1vw;
 		}
+			.about-me p {
+				text-align: justify;
+				line-height: 22px;
+			}
+			.about-me .social-links {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				padding: 1vh 0;
+			}
+				.social-links a {
+					display: block;
+				}
+				.social-links #btn-fb {
+					color: #45619D;
+				}
+				.social-links #btn-tw {
+					color: #339CC3;
+				}
+				.social-links #btn-in {
+					color: #1B86BC;
+				}
 			.about-me img {
 				display: block;
 				border-radius: 15px;
 				width: 80%;
 				height: auto;
+				margin-top: 2vh;
 				margin-left: auto;
 				margin-right: auto;
 			}
-
-			.social-links {}
 
 		.recent-articles .r-posts {
 			background-color: white;
@@ -171,6 +204,16 @@ section {
 			margin-left: -4vw;
 			padding: 3vh 1vw;
 		}
+			.r-categories input {
+				display: none;
+			}
+			.r-categories label {
+				display: block;
+				cursor: pointer;
+			}
+			.r-categories label:hover {
+				text-decoration: underline;
+			}
 
 		.recent-articles i {
 			color: black;
@@ -193,28 +236,6 @@ section {
 /*
 **********************************************
 **********************************************
-			ASIDE STYLES
-**********************************************
-**********************************************
-*/
-
-/*.social-links {
-	margin: 20vh -5vw;
-}*/
-
-.social-links i {
-	color: black;
-}
-
-/*.social-links a {
-	display: block;
-	padding: 1vh .5vw;
-	margin-top: 1vh;
-}*/
-
-/*
-**********************************************
-**********************************************
 			FOOTER STYLES
 **********************************************
 **********************************************
@@ -224,7 +245,7 @@ section {
 	padding: 1.5vh 0;
 	background-color: #020304;
 	color: white;
-	font-size: .6rem;
+	font-size: .7rem;
 	text-align: center;
 }
 	.copyright {

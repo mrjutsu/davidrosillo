@@ -4,4 +4,8 @@
 		$("#filter-posts").submit();
 	});
 
+	$(".send-filter-posts").on("click",function(){
+		$("#cat-filter-posts").submit();
+	});
+
 });

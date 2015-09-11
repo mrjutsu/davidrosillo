@@ -1,6 +1,30 @@
 <hr>
 <article class="post-category">
-	<h3>
-		<%= category.name %>
-	</h3>
+	<%= form_tag( root_path, remote: true, id: "cat-filter-posts" ) do %>
+	    <%= hidden_field_tag :authenticity_token, value: form_authenticity_token %>
+	    <h3>
+		    <%= radio_button_tag :p_filter, 1, true, { id: "life" } %>
+		    <label for="life">Life</label>
+	    </h3>
+	    <hr>
+	    <h3>
+		    <%= radio_button_tag :p_filter, 2, true, { id: "how-to" } %>
+		    <label for="how-to">How To</label>
+		</h3>
+	    <hr>
+	    <h3>
+		    <%= radio_button_tag :p_filter, 3, true, { id: "games" } %>
+		    <label for="games">Games</label>
+		</h3>
+	    <hr>
+	    <h3>
+		    <%= radio_button_tag :p_filter, 4, true, { id: "opinion" } %>
+		    <label for="opinion">Opinion</label>
+		</h3>
+	    <hr>
+	    <h3>
+		    <%= radio_button_tag :p_filter, 0, true, { id: "all" } %>
+		    <label for="all" class="active">All</label>
+		</h3>
+ 	<% end %>
 </article>

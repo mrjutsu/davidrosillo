@@ -59,10 +59,12 @@ section {
 }
 	.nav-btns li {
 		height: 100%;
-		padding: 16px 5vw;
+		padding: 16px 0;
+		/*cursor: pointer;*/
 	}
 	.nav-a {
 		color: white;
+		padding: 16px 5vw;
 	}
 	.nav-btns li:hover:not(:first-child) {
 		background-color: #626266;
@@ -86,7 +88,7 @@ section {
 		background-color: white;
 		width: 60vw;
 		margin-top: 3vh;
-		margin-bottom: 3vh;
+		margin-bottom: 2vh;
 		margin-right: -4vw;
 		padding: 4vh 1vw;
 	}

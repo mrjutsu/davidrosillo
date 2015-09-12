@@ -1,18 +1,3 @@
-<section>
-  <% @portfolios.each do |portfolio| %>
-    <article>
-      <p>
-        <%= portfolio.name %>
-      </p>
-      <p>
-        <%= portfolio.url %>
-      </p>
-      <p>
-        <%= portfolio.description %>
-      </p>
-      <p>
-        <%= link_to 'Show', portfolio %>
-      </p>
-    </article>
-  <% end %>
-</section>
+<div class="portfolios">
+  <%= render partial: 'portfolios', collection: @portfolios, as: :portfolio %>
+</div>

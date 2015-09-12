@@ -60,7 +60,6 @@ section {
 	.nav-btns li {
 		height: 100%;
 		padding: 16px 0;
-		/*cursor: pointer;*/
 	}
 	.nav-a {
 		color: white;
@@ -234,6 +233,27 @@ section {
 		.recent-articles h3 a:hover {
 			text-decoration: underline;
 		}
+
+.portfolios {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 60vw;
+	margin-top: 3vh;
+	margin-bottom: 2vh;
+	margin-right: -4vw;
+	padding: 0 1vw;
+}
+	.portfolio-article {
+		width: 25vw;
+		height: 25vh;
+		/*margin-top: 3vh;
+		margin-bottom: 2vh;
+		margin-right: 2vw;*/
+		/*margin-left: 2vw;*/
+		padding: 4vh 1vw;
+		background-color: white;
+	}
 
 /*
 **********************************************

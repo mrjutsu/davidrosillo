@@ -1,14 +1,16 @@
-<article>
-	<p>
-	  <strong>Name:</strong>
-	  <%= @post.name %>
-	</p>
-	<p>
-	  <strong>Category:</strong>
-	  <%= @post.category.name %>
-	</p>
-	<p>
-	  <strong>Body:</strong>
-	  <%= @post.body.html_safe %>
-	</p>
-</article>
+<div class="p-body">
+	<article>
+		<p>
+		  <strong>Name:</strong>
+		  <%= @post.name %>
+		</p>
+		<p>
+		  <strong>Category:</strong>
+		  <%= @post.category.name %>
+		</p>
+		<p>
+		  <strong>Body:</strong>
+		  <%= @post.body.html_safe %>
+		</p>
+	</article>
+</div>

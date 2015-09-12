@@ -1,5 +1,9 @@
 class PortfoliosController < InheritedResources::Base
 
+	def index
+		@portfolios = Portfolio.all.order(created_at: :desc)
+	end
+
   private
 
     def portfolio_params

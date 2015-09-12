@@ -133,14 +133,14 @@ section {
 				padding: 2vh 4vw;
 				border-color: #938172;
 				border-bottom-style: solid;
-				border-bottom-width: 4px;
+				border-bottom-width: 6px;
 				cursor: pointer;
 			}
 			.filter-cats .active {
-				border-color: #541F14;
+				border-color: #AB2222;
 			}
 			.filter-cats label:hover:not(.active) {
-				border-color: #541F14;
+				border-color: #AB2222;
 			}
 
 	.recent-articles {

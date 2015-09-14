@@ -1,11 +1,16 @@
 <article class="portfolio-article">
-  <p>
-    <%= portfolio.name %>
-  </p>
-  <p>
-    <%= portfolio.description %>
-  </p>
-  <p>
-    <%= link_to 'Show', portfolio %>
-  </p>
+  <div class="p-image">
+    <%= image_tag ( portfolio.avatar.url ) %>
+  </div>
+  <div class="p-text">
+    <h3>
+      <%= portfolio.name %>
+    </h3>
+    <p>
+      <%= portfolio.description %>
+    </p>
+    <p>
+      <%= link_to 'Read More', portfolio %>
+    </p>
+  </div>
 </article>

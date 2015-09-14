@@ -18,6 +18,7 @@ gem 'nested_form'
 gem 'active_admin_editor', github: 'mrjutsu/active_admin_editor'
 gem 'figaro'
 gem "font-awesome-rails"
+gem "paperclip", "~> 4.3"
 
 # Use Unicorn as the app server
 # gem 'unicorn'

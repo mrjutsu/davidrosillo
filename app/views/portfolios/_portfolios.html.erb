@@ -2,15 +2,20 @@
   <div class="p-image">
     <%= image_tag ( portfolio.avatar.url ) %>
   </div>
-  <div class="p-text">
-    <h3>
-      <%= portfolio.name %>
-    </h3>
-    <p>
-      <%= portfolio.description %>
-    </p>
-    <p>
-      <%= link_to 'Read More', portfolio %>
-    </p>
+  <h3>
+    <%= portfolio.name %>
+  </h3>
+  <div class="p-categories">
+    <% portfolio.portfolio_categories.each do |c| %>
+      <span class="<%= c.name %>">
+        <%= c.name %>
+      </span>
+    <% end %>
   </div>
+  <p class="p-description">
+    <%= portfolio.description %>
+  </p>
+  <p class="p-more">
+    <strong><%= link_to 'Read More', portfolio %></strong>
+  </p>
 </article>

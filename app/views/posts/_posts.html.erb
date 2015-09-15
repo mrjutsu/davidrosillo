@@ -12,6 +12,6 @@
 		<%= post.body.truncate(500).html_safe %>
 	</span>
 	<p>
-		<%= link_to 'Read More', post_path(post.id) %>
+		<strong><%= link_to 'Read More', post_path(post.id) %></strong>
 	</p>
 </article>

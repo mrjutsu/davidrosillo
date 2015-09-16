@@ -147,7 +147,6 @@ section {
 		margin-bottom: 20px;
 		margin-right: -58px;
 		padding: 30px 15px;
-		/*padding: 4vh 1vw;*/
 	}
 
 		.post-article {
@@ -293,16 +292,56 @@ section {
 		}
 
 .portfolios {
-	display: flex;
+	/*display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
-	align-content: flex-start;
+	align-content: flex-start;*/
 	width: 60vw;
 	margin-top: 20px;
 	margin-bottom: 2vh;
 	margin-right: -58px;
 	padding: 0 1vw;
 }
+	.p-filter {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-bottom: 50px;
+		padding: 10px 0;
+	}
+		.p-filter input {
+			display: none;
+		}
+		.p-filter label {
+			display: inline;
+			padding: 15px 35px;
+			border-color: #938172;
+			border-bottom-style: solid;
+			border-bottom-width: 3px;
+			cursor: pointer;
+		}
+		.p-filter .active {
+			border-color: #AB2222;
+			border-bottom-width: 6px;
+		}
+		.p-filter label:hover:not(.active) {
+			border-color: #AB2222;
+			border-bottom-width: 6px;
+		}
+		/*.p-filter #gem-lb .active {
+			border-bottom-width: 6px;
+			border-color: #33CC66;
+		}
+		#gem-lb:hover {
+			border-color: #33CC66;
+		}*/
+	.portfolio-list {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-content: flex-start;
+	}
 	.portfolio-article {
 		width: 360px;
 		height: 360px;

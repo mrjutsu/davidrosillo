@@ -1,0 +1,8 @@
+$("#gem").prop("checked") ? $("#gem-lb").addClass("active") : $("#gem-lb").removeClass("active")
+$("#javascript").prop("checked") ? $("#javascript-lb").addClass("active") : $("#javascript-lb").removeClass("active")
+$("#ruby").prop("checked") ? $("#ruby-lb").addClass("active") : $("#ruby-lb").removeClass("active")
+$("#html").prop("checked") ? $("#html-lb").addClass("active") : $("#html-lb").removeClass("active")
+$("#css").prop("checked") ? $("#css-lb").addClass("active") : $("#css-lb").removeClass("active")
+$("#android").prop("checked") ? $("#android-lb").addClass("active") : $("#android-lb").removeClass("active")
+$("#ios").prop("checked") ? $("#ios-lb").addClass("active") : $("#ios-lb").removeClass("active")
+$(".portfolio-list").html("<%= escape_javascript( render partial: 'portfolios', collection: @portfolios, as: :portfolio ) %>");

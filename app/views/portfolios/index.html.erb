@@ -1,3 +1,25 @@
 <div class="portfolios">
-  <%= render partial: 'portfolios', collection: @portfolios, as: :portfolio %>
+	<div class="p-filter">
+		<%= form_tag( portfolios_path, remote: true, id: "filter-portfolios" ) do %>
+			<%= hidden_field_tag :authenticity_token, value: form_authenticity_token %>
+			<%= check_box_tag "category[]", 1, false, { id: "gem" } %>
+			<label for="gem" id="gem-lb">Gem</label>
+			<%#= radio_button_tag :p_filter, 2, true, { id: "javascript" } %>
+			<%= check_box_tag "category[]", 2, false, { id: "javascript" } %>
+			<label for="javascript" id="javascript-lb" >Javascript</label>
+			<%= check_box_tag "category[]", 3, false, { id: "ruby" } %>
+			<label for="ruby" id="ruby-lb" >Ruby</label>
+			<%= check_box_tag "category[]", 4, false, { id: "html" } %>
+			<label for="html" id="html-lb" >HTML</label>
+			<%= check_box_tag "category[]", 5, false, { id: "css" } %>
+			<label for="css" id="css-lb" >CSS</label>
+			<%= check_box_tag "category[]", 6, false, { id: "android" } %>
+			<label for="android" id="android-lb" >Android</label>
+			<%= check_box_tag "category[]", 7, false, { id: "ios" } %>
+			<label for="ios" id="ios-lb" >iOS</label>
+		<% end %>
+	</div>
+	<div class="portfolio-list">
+  		<%= render partial: 'portfolios', collection: @portfolios, as: :portfolio %>
+  	</div>
 </div>

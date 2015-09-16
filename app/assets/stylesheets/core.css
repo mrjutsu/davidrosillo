@@ -199,6 +199,36 @@ section {
 				border-color: #AB2222;
 			}
 
+	.post-show {
+		margin-top: -20px;
+		margin-left: 10px;
+		margin-right: 10px;
+		text-align: justify;
+	}
+		.post-title {
+			text-transform: capitalize;
+		}
+		.post-show span {
+			display: block;
+			font-size: .85rem;
+			margin: 10px 0;
+		}
+		.post-show span i {
+			margin-right: 5px;
+		}
+		.post-show .post-body {
+			margin-top: 20px;
+		}
+		pre {
+			margin: 20px 0;
+			border-style: solid;
+			border-width: 1px;
+			border-color: grey;
+		}
+		pre code {
+			display: block;
+			margin: 5px 5px;
+		}
 	.recent-articles {
 	}
 

@@ -1,16 +1,14 @@
 <div class="p-body">
-	<article>
-		<p>
-		  <strong>Name:</strong>
+	<article class="post-show">
+		<h2 class="post-title">
 		  <%= @post.name %>
-		</p>
-		<p>
-		  <strong>Category:</strong>
-		  <%= @post.category.name %>
-		</p>
-		<p>
-		  <strong>Body:</strong>
-		  <%= @post.body.html_safe %>
-		</p>
+		</h2>
+		<span><%= @post.created_at %></span>
+		<span>
+			<i class="fa fa-tag post-tag"></i><%= @post.category.name %>
+		</span>
+		<div class="post-body">
+			<%= @post.body.html_safe %>
+		</div>
 	</article>
 </div>

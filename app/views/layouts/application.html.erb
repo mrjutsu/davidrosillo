@@ -37,33 +37,35 @@
 			<!-- <div class="p-body"> -->
 				<%= yield %>
 			<!-- </div> -->
-			<div class="recent-articles">
-				<div class="about-me">
-					<div>
-						&nbsp;&nbsp;<i class="fa fa-question"></i>&nbsp;&nbsp;<span>About Me</span>
-						<hr>
+			<% unless params[:controller] == "portfolios" && params[:action] == "show" %>
+				<div class="recent-articles">
+					<div class="about-me">
+						<div>
+							&nbsp;&nbsp;<i class="fa fa-question"></i>&nbsp;&nbsp;<span>About Me</span>
+							<hr>
+						</div>
+						<img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/15161_10155006909055696_2809560357001748257_n.jpg?oh=94c7cab84966be273d141fb7fba995e9&oe=56757130&__gda__=1450264305_6aa1a66ec9eebd363bc9cbfdcf72d17a">
+						<p>I'm a Multimedia Engineer with an emphasis in web development, I'm skilled in Ruby on Rails, Javascript, jQuery, CSS and Git. I'm always looking to increase my skills and learn new things from others.</p>
+						<div class="social-links">
+							<a href="https://github.com/mrjutsu" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+							<a href="https://co.linkedin.com/in/davidrosillo/en" target="_blank"><i class="fa fa-linkedin-square fa-2x" id="btn-in"></i></a>
+							<a href="https://www.facebook.com/drosilloricardo" target="_blank"><i class="fa fa-facebook-square fa-2x" id="btn-fb"></i></a>
+							<a href="https://twitter.com/MrJutsu" target="_blank"><i class="fa fa-twitter fa-2x" id="btn-tw"></i></a>
+							<!-- <a href="https://instagram.com/mrjutsu/" target="_blank"><i class="fa fa-instagram fa-2x" id="btn-ig"></i></a> -->
+						</div>
 					</div>
-					<img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/15161_10155006909055696_2809560357001748257_n.jpg?oh=94c7cab84966be273d141fb7fba995e9&oe=56757130&__gda__=1450264305_6aa1a66ec9eebd363bc9cbfdcf72d17a">
-					<p>I'm a Multimedia Engineer with an emphasis in web development, I'm skilled in Ruby on Rails, Javascript, jQuery, CSS and Git. I'm always looking to increase my skills and learn new things from others.</p>
-					<div class="social-links">
-						<a href="https://github.com/mrjutsu" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-						<a href="https://co.linkedin.com/in/davidrosillo/en" target="_blank"><i class="fa fa-linkedin-square fa-2x" id="btn-in"></i></a>
-						<a href="https://www.facebook.com/drosilloricardo" target="_blank"><i class="fa fa-facebook-square fa-2x" id="btn-fb"></i></a>
-						<a href="https://twitter.com/MrJutsu" target="_blank"><i class="fa fa-twitter fa-2x" id="btn-tw"></i></a>
-						<!-- <a href="https://instagram.com/mrjutsu/" target="_blank"><i class="fa fa-instagram fa-2x" id="btn-ig"></i></a> -->
+					<div class="r-posts">
+						&nbsp;&nbsp;<i class="fa fa-book"></i>&nbsp;&nbsp;<span>Recent Posts</span>
+						<%= render partial: 'posts/recent_posts', collection: Post.recent, as: :post %>
 					</div>
+					<% if params[:controller] == "landings" %>
+						<div class="r-categories">
+							&nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;<span>Categories</span>
+							<%= render partial: 'landings/categories' %>
+						</div>
+					<% end %>
 				</div>
-				<div class="r-posts">
-					&nbsp;&nbsp;<i class="fa fa-book"></i>&nbsp;&nbsp;<span>Recent Posts</span>
-					<%= render partial: 'posts/recent_posts', collection: Post.recent, as: :post %>
-				</div>
-				<% if params[:controller] == "landings" %>
-					<div class="r-categories">
-						&nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;<span>Categories</span>
-						<%= render partial: 'landings/categories' %>
-					</div>
-				<% end %>
-			</div>
+			<% end %>
 		</section>
 		<section class="post-content">
 			<footer>

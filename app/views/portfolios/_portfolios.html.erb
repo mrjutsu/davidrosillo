@@ -1,9 +1,11 @@
 <article class="portfolio-article">
   <div class="p-image">
-    <%= image_tag ( portfolio.avatar.url ) %>
+    <%= link_to ( portfolio ) do %>
+      <%= image_tag ( portfolio.avatar.url ) %>
+    <% end %>
   </div>
   <h3>
-    <%= portfolio.name %>
+    <%= link_to portfolio.name, portfolio %>
   </h3>
   <div class="p-categories">
     <% portfolio.portfolio_categories.each do |c| %>

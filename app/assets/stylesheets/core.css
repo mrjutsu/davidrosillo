@@ -329,13 +329,6 @@ section {
 			border-color: #AB2222;
 			border-bottom-width: 6px;
 		}
-		/*.p-filter #gem-lb .active {
-			border-bottom-width: 6px;
-			border-color: #33CC66;
-		}
-		#gem-lb:hover {
-			border-color: #33CC66;
-		}*/
 	.portfolio-list {
 		display: flex;
 		flex-flow: row wrap;
@@ -363,6 +356,9 @@ section {
 			margin: 10px 5%;
 			text-align: justify;
 			text-transform: capitalize;
+		}
+		.portfolio-article h3 a {
+			color: black;
 		}
 		.p-categories {
 			margin: 0 5%;

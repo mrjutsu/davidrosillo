@@ -3,8 +3,10 @@
 		<h2 class="post-title">
 		  <%= @post.name %>
 		</h2>
-		<span><%= @post.created_at %></span>
-		<span>
+		<span class="post-date">
+			<%=l @post.created_at, format: ("%^B %Y") %>
+		</span>
+		<span class="post-cat">
 			<i class="fa fa-tag post-tag"></i><%= @post.category.name %>
 		</span>
 		<div class="post-body">

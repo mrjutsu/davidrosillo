@@ -201,23 +201,31 @@ section {
 
 	.post-show {
 		margin-top: -20px;
-		margin-left: 10px;
-		margin-right: 10px;
+		margin-left: 12px;
+		margin-right: 12px;
 		text-align: justify;
 	}
 		.post-title {
 			text-transform: capitalize;
 		}
-		.post-show span {
+		.post-cat {
 			display: block;
 			font-size: .85rem;
 			margin: 10px 0;
 		}
-		.post-show span i {
+		.post-date {
+			display: block;
+			/*margin-top: -10px;*/
+			margin-bottom: 6px;
+			font-size: .8rem;
+		}
+		.post-cat i {
 			margin-right: 5px;
+			color: black;
 		}
 		.post-show .post-body {
 			margin-top: 20px;
+			line-height: 26px;
 		}
 		pre {
 			margin: 20px 0;
@@ -228,6 +236,7 @@ section {
 		pre code {
 			display: block;
 			margin: 5px 5px;
+			line-height: 20px;
 		}
 	.recent-articles {
 	}

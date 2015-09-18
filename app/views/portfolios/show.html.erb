@@ -1,16 +1,21 @@
-<article>
-	<p>
-	  <strong>Name:</strong>
-	  <%= @portfolio.name %>
-	</p>
-	<p>
-	  <strong>Url:</strong>
-	  <%= @portfolio.url %>
-	</p>
-	<p>
-	  <strong>Description:</strong>
+<div class="portfolio-img">
+	<%= image_tag( @portfolio.avatar.url ) %>
+</div>
+<article class="portfolio-show">
+	<h2>
+		<%= @portfolio.name %>
+	</h2>
+	<div class="p-categories">
+	    <% @portfolio.portfolio_categories.each do |c| %>
+	      <span class="<%= c.name %>">
+	        <%= c.name %>
+	      </span>
+	    <% end %>
+	</div>
+	<p class="portfolio-desc">
 	  <%= @portfolio.description %>
 	</p>
+	<a href="<%= @portfolio.url %>" target="_blank" class="go-btn">Check it out!</a>
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">
 	    /* * * CONFIGURATION VARIABLES * * */

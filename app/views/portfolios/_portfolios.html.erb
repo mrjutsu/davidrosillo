@@ -15,7 +15,7 @@
     <% end %>
   </div>
   <p class="p-description">
-    <%= portfolio.description %>
+    <%= portfolio.description.truncate(150) %>
   </p>
   <p class="p-more">
     <strong><%= link_to 'Read More', portfolio %></strong>

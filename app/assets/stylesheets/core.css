@@ -203,6 +203,7 @@ section {
 		margin-top: -20px;
 		margin-left: 12px;
 		margin-right: 12px;
+		margin-bottom: 25px;
 		text-align: justify;
 	}
 		.post-title {
@@ -421,13 +422,14 @@ section {
 		}
 	.portfolio-show {
 		background-color: white;
-		padding: 0 20px;
+		padding: 0 25px;
+		width: 50vw;
 	}
 	.portfolio-img {
 		width: 100vw;
 		height: 400px;
 		overflow: hidden;
-		background-color: peru;
+		background-color: white;
 	}
 	.portfolio-img img {
 		width: 100%;

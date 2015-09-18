@@ -57,7 +57,7 @@
 					</div>
 					<div class="r-posts">
 						&nbsp;&nbsp;<i class="fa fa-book"></i>&nbsp;&nbsp;<span>Recent Posts</span>
-						<%= render partial: 'posts/recent_posts', collection: Post.recent, as: :post %>
+						<%= render partial: 'posts/recent_posts', collection: Post.recent.reverse, as: :post %>
 					</div>
 					<% if params[:controller] == "landings" %>
 						<div class="r-categories">

@@ -124,7 +124,7 @@ section {
 	}
 	.nav-a {
 		color: white;
-		padding: 16px 5vw;
+		padding: 16px 72px;
 	}
 	.nav-btns li:hover:not(:first-child) {
 		background-color: #626266;
@@ -146,7 +146,7 @@ section {
 }
 	.p-body {
 		background-color: white;
-		width: 60vw;
+		width: 850px;
 		margin-top: 20px;
 		margin-bottom: 20px;
 		margin-right: -58px;
@@ -248,7 +248,7 @@ section {
 		.recent-articles .about-me{
 			background-color: white;
 			height: 50%;
-			width: 25vw;
+			width: 360px;
 			margin-top: 20px;
 			margin-bottom: 20px;
 			margin-left: -58px;
@@ -289,7 +289,7 @@ section {
 		.recent-articles .r-posts {
 			background-color: white;
 			height: 50%;
-			width: 25vw;
+			width: 360px;
 			margin-top: 20px;
 			margin-bottom: 20px;
 			margin-left: -58px;
@@ -297,9 +297,9 @@ section {
 		}
 
 		.recent-articles .r-categories {
-			margin-top: 5vh;
+			margin-top: 20px;
 			background-color: white;
-			width: 25vw;
+			width: 360px;
 			margin-top: 20px;
 			margin-bottom: 20px;
 			margin-left: -58px;
@@ -335,11 +335,11 @@ section {
 		}
 
 .portfolios {
-	width: 60vw;
+	width: 850px;
 	margin-top: 20px;
-	margin-bottom: 2vh;
+	margin-bottom: 20px;
 	margin-right: -58px;
-	padding: 0 1vw;
+	padding: 0 10px;
 }
 	.p-filter {
 		width: 100%;
@@ -427,7 +427,7 @@ section {
 	.portfolio-show {
 		background-color: white;
 		padding: 0 25px;
-		width: 50vw;
+		width: 700px;
 	}
 	.portfolio-img {
 		width: 100vw;

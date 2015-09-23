@@ -32,6 +32,28 @@
 					</li> -->
 					<!-- <i class="fa fa-search"></i> -->
 				</ul>
+				<input type="checkbox" class="menu_ck" id="menu_ck">
+				<label for="menu_ck" class="menu_lb">
+					<i class="fa fa-bars fa-2x"></i>
+				</label>
+				<ul class="nav-btns-resp">
+					<li>
+						<strong>
+							<%= link_to 'Portfolio', portfolios_path, class: "nav-a" %>
+						</strong>
+					</li>
+					<li>
+						<strong>
+							<%= link_to 'About Me', about_landings_path, class: "nav-a" %>
+						</strong>
+					</li>
+					<li>
+					<strong>
+						<%= link_to 'Contact', new_contact_path, class: "nav-a"  %>
+					</strong>
+					</li>
+					<!-- <i class="fa fa-search"></i> -->
+				</ul>
 			</nav>
 		</section>
 		<section class="content">

@@ -19,6 +19,12 @@
 			<label for="ios" id="ios-lb" >iOS</label> -->
 		<% end %>
 	</div>
+	<div class="p-filter-resp">
+		<%= form_tag( portfolios_path, remote: true, id: "filter-posts-resp" ) do %>
+	      <%= hidden_field_tag :authenticity_token, value: form_authenticity_token %>
+	      <%= select_tag "category[]", options_for_select( [ ["Gem",1], ["Javascript",2], ["Ruby", 3], ["HTML", 4], ["CSS", 5] ] ), multiple: true, id: "resp-filter" %>
+	    <% end %>
+	</div>
 	<div class="portfolio-list">
   		<%= render partial: 'portfolios', collection: @portfolios, as: :portfolio %>
   	</div>

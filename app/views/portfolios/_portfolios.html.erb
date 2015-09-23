@@ -14,9 +14,9 @@
       </span>
     <% end %>
   </div>
-  <p class="p-description">
-    <%= portfolio.description.truncate(150) %>
-  </p>
+  <div class="p-description">
+    <%= portfolio.description.truncate(150).html_safe %>
+  </div>
   <p class="p-more">
     <strong><%= link_to 'Read More', portfolio %></strong>
   </p>

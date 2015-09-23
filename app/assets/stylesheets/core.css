@@ -152,6 +152,9 @@ section {
 	.filter-cats-resp {
 		display: none;
 	}
+	.p-filter-resp {
+		display: none;
+	}
 
 /* FINISH HIDE RESPONSIVE ELEMENTS */
 
@@ -574,6 +577,71 @@ section {
 		.post p {
 			text-align: center;
 		}
+
+	.portfolios {
+		padding: 0 0;
+		margin: 0 0;
+		width: 100vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-center;
+	}
+	.p-filter {
+		width: 100%;
+	}
+	.portfolio-article {
+		width: 80%;
+		height: 380px;
+	}
+		.portfolio-article .p-image {
+			height: 50%;
+		}
+		.portfolio-article h3 {
+			font-size: 1.6rem;
+		}
+		.portfolio-article .p-description {
+			line-height: 20px;
+		}
+		.portfolio-article .p-more {
+			margin-top: 40px;
+		}
+	.p-filter {
+		display: none;
+	}
+	.p-filter-resp {
+		display: block;
+		margin: 20px 0;
+		text-align: center;
+	}
+		.p-filter-resp select {
+			width: 80%;
+		}
+	.portfolio-img {
+		width: 100vw;
+		height: 190px;
+		overflow: hidden;
+		background-color: white;
+	}
+	.portfolio-show h2 {
+		font-size: 1.5rem;
+	}
+	.portfolio-show .portfolio-desc {
+		font-size: 1rem;
+		line-height: 30px;
+	}
+	.portfolio-show .go-btn {
+		color: black;
+		display: block;
+		padding: 10px 10px;
+		margin-bottom: 30px;
+		width: 30%;
+		margin-left: auto;
+		margin-right: auto;
+		border-width: 2px;
+		border-style: solid;
+		border-radius: 10px;
+		border-color: #626266;
+	}
 
 }
 

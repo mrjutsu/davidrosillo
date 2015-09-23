@@ -18,7 +18,7 @@ ActiveAdmin.register Portfolio do
 			f.input :portfolio_category_ids, as: :check_boxes, collection: PortfolioCategory.all.map { |x| [x.name, x.id] }, checked: true
 			f.input :avatar, as: :file
 			# f.input :subcategory_ids, as: :select, collection: Subcategory.all.map { |x| [x.name,x.id] }
-			f.input :description
+			f.input :description, as: :html_editor
 		end
 		f.actions
 	end
@@ -44,7 +44,9 @@ ActiveAdmin.register Portfolio do
 				end
 			end
 			# row :subcategory
-			row :description
+			row "Description" do
+				portfolio.description.html_safe
+			end
 		end
 	end
 

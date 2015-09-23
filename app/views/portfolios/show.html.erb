@@ -12,9 +12,9 @@
 	      </span>
 	    <% end %>
 	</div>
-	<p class="portfolio-desc">
-	  <%= @portfolio.description %>
-	</p>
+	<div class="portfolio-desc">
+	  <%= @portfolio.description.html_safe %>
+	</div>
 	<a href="<%= @portfolio.url %>" target="_blank" class="go-btn">Check it out!</a>
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">

@@ -147,6 +147,14 @@ section {
 **********************************************
 */
 
+/* HIDE RESPONSIVE ELEMENTS */
+
+	.filter-cats-resp {
+		display: none;
+	}
+
+/* FINISH HIDE RESPONSIVE ELEMENTS */
+
 .content {
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -528,7 +536,7 @@ section {
 	}
 	.nav-btns-resp li {
 		text-align: center;
-		width: 100%;
+		width: 500px;
 		margin-right: auto;
 		margin-left: auto;
 		padding: 30px 0;
@@ -540,5 +548,34 @@ section {
 		background-color: white;
 		margin: 0 0;
 	}
+		.filter-cats {
+			display: none;
+		}
+		.filter-cats-resp {
+			display: block;
+			margin-top: -5px;
+			margin-bottom: 25px;
+			text-align: center;
+		}
+		.filter-cats-resp select {
+			width: 95%;
+		}
+		.post h2 {
+			display: block;
+			font-size: 1.5rem;
+			line-height: 30px;
+		}
+		.post i {
+			margin-bottom: 20px;
+			font-size: .9rem;
+		}
+		.post .post-body {
+			font-size: 1.1rem;
+			line-height: 25px;
+		}
+		.post p {
+			text-align: center;
+		}
+
 }
 

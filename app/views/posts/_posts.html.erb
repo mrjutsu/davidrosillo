@@ -3,12 +3,12 @@
 	<h2>
 		<%= link_to post.name, post_path(post.id) %>
 	</h2>
-	<i class="fa fa-tags post-tag">
+	<i class="fa fa-tag post-tag">
 		<span>
 			<%= post.category.name %>
 		</span>
 	</i>
-	<span>
+	<span class="post-body">
 		<%= post.body.truncate(500).html_safe %>
 	</span>
 	<p>

@@ -15,6 +15,10 @@
 		$("#cat-filter-posts").submit();
 	});
 
+	$("#resp-filter").on("change",function(){
+		$("#filter-posts-resp").submit();
+	});
+
 	$(".menu_lb").on("click",function(){
 		if ( $("#menu_ck").prop("checked") ) {
 			$(".nav-btns-resp").hide();

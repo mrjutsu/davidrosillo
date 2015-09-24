@@ -509,7 +509,7 @@ section {
 **********************************************
 */
 
-@media (max-width: 480px) {
+@media (max-width: 736px) {
 	nav {
 		display: flex;
 		flex-flow: row wrap;
@@ -563,18 +563,18 @@ section {
 		}
 		.post h2 {
 			display: block;
-			font-size: 1.5rem;
+			font-size: 1.6rem;
 			line-height: 30px;
 		}
 		.post i {
 			margin-bottom: 20px;
 			font-size: .9rem;
 		}
-		.post .post-body {
-			font-size: 1.1rem;
-			line-height: 25px;
-		}
 		.post p {
+			font-size: 1rem;
+			line-height: 30px;
+		}
+		.post .post-rm {
 			text-align: center;
 		}
 
@@ -584,7 +584,7 @@ section {
 		width: 100vw;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-center;
+		justify-content: center;
 	}
 	.p-filter {
 		width: 100%;
@@ -642,6 +642,184 @@ section {
 		border-radius: 10px;
 		border-color: #626266;
 	}
-
 }
+
+@media (min-width: 737px) and (max-width: 1024px) {
+	nav {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+	.nav-btns li:not(:first-child) {
+		display: none;
+	}
+	.nav-btns li h1 {
+		display: inline-block;
+		line-height: 10px;
+		font-size: 1.3rem;
+		margin-left: -90px;
+	}
+	.menu_lb {
+		margin-top: 16px;
+		margin-right: 20px;
+		display: inline-block;
+	}
+	.nav-btns-resp {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		width: 100%;
+		margin-left: -40px;
+		margin-top: -5px;
+		font-size: 1.2rem;
+	}
+	.nav-btns-resp li {
+		text-align: center;
+		width: 100%;
+		padding: 30px 0;
+	}
+	.recent-articles {
+		display: none;
+	}
+	.p-body {
+		margin: 0 0;
+	}
+		.filter-cats {
+			display: none;
+		}
+		.filter-cats-resp {
+			display: block;
+			margin-top: -5px;
+			margin-bottom: 25px;
+			text-align: center;
+		}
+		.filter-cats-resp select {
+			width: 95%;
+		}
+		.post {
+			margin: 0 20px;
+		}
+		.post h2 {
+			display: block;
+			font-size: 1.8rem;
+			line-height: 34px;
+		}
+		.post i {
+			margin-bottom: 20px;
+			font-size: 1rem;
+		}
+		.post p {
+			font-size: 1.3rem;
+			line-height: 30px;
+			text-align: justify;
+		}
+		.post .post-body {
+			font-size: 1.3rem;
+			line-height: 25px;
+		}
+		.post .post-rm {
+			text-align: center;
+		}
+		.post-show .post-title {
+			font-size: 1.8rem;
+		}
+			.post-date {
+				font-size: .9rem;
+				margin-bottom: 20px;
+			}
+			.post-cat {
+				font-size: .9rem;
+			}
+			.post-body {
+				font-size: 1.2rem;
+			}
+				.post-body p {
+					line-height: 30px;
+				}
+
+	.portfolios {
+		padding: 0 0;
+		margin: 0 0;
+		width: 100vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.p-filter {
+		width: 100%;
+	}
+	.portfolio-article {
+		width: 80%;
+		height: 400px;
+	}
+		.portfolio-article .p-image {
+			height: 50%;
+		}
+		.portfolio-article h3 {
+			margin-top: -15px;
+			font-size: 1.8rem;
+		}
+		.p-categories span {
+			font-size: .9rem;
+		}
+		.portfolio-article .p-description {
+			font-size: 1.1rem;
+			line-height: 25px;
+		}
+		.portfolio-article .p-more {
+			margin-top: 20px;
+			font-size: 1.1rem;
+		}
+	.p-filter {
+		display: none;
+	}
+	.p-filter-resp {
+		display: block;
+		margin: 20px 0;
+		text-align: center;
+	}
+		.p-filter-resp select {
+			width: 80%;
+		}
+	.portfolio-img {
+		width: 100vw;
+		height: 310px;
+		overflow: hidden;
+		background-color: white;
+	}
+	.portfolio-show {
+		width: 80%;
+	}
+	.portfolio-show h2 {
+		font-size: 1.9rem;
+	}
+	.p-categories span {
+		font-size: .9rem;
+	}
+	.portfolio-show .portfolio-desc {
+		font-size: 1.1rem;
+		line-height: 30px;
+	}
+	.portfolio-show .go-btn {
+		color: black;
+		display: block;
+		padding: 10px 10px;
+		margin-bottom: 30px;
+		width: 15%;
+		margin-left: auto;
+		margin-right: auto;
+		border-width: 2px;
+		border-style: solid;
+		border-radius: 10px;
+		border-color: #626266;
+	}
+	.post-content {
+		padding: 10px 0;
+		background-color: #020304;
+		color: white;
+		font-size: 1rem;
+		text-align: center;
+	}
+}
+
 

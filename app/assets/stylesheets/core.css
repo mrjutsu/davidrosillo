@@ -206,9 +206,6 @@ section {
 			margin-top: 15px;
 			font-size: .9rem;
 		}
-		/*.post span {
-			font-size: .9rem;
-		}*/
 		.post p {
 			/*font-size: 1rem;*/
 			line-height: 25px;
@@ -562,12 +559,21 @@ section {
 		width: 100%;
 		padding: 30px 0;
 	}
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+		background-color: #e7e7e7;
+	}
 	.recent-articles {
 		display: none;
 	}
 	.p-body {
 		background-color: white;
 		margin: 0 0;
+		padding: 30px 15px;
+		flex: 0 100%;
 	}
 		.filter-cats {
 			display: none;
@@ -698,11 +704,21 @@ section {
 		width: 100%;
 		padding: 30px 0;
 	}
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+		background-color: #e7e7e7;
+	}
 	.recent-articles {
 		display: none;
 	}
 	.p-body {
+		background-color: white;
 		margin: 0 0;
+		padding: 30px 15px;
+		flex: 0 100%;
 	}
 		.filter-cats {
 			display: none;
@@ -808,7 +824,8 @@ section {
 		background-color: white;
 	}
 	.portfolio-show {
-		width: 80%;
+		margin: 0 0;
+		width: 100%;
 	}
 	.portfolio-show h2 {
 		font-size: 1.9rem;

@@ -159,18 +159,22 @@ section {
 /* FINISH HIDE RESPONSIVE ELEMENTS */
 
 .content {
+	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	background-color: #e7e7e7;
 }
 	.p-body {
 		background-color: white;
-		width: 850px;
+		/*width: 60%;*/
+		/*width: 850px;*/
 		margin-top: 20px;
 		margin-bottom: 20px;
-		margin-right: -58px;
+		margin-left: 4%;
+		/*margin-right: 5%;*/
 		padding: 30px 15px;
+		flex: 0 60%;
 	}
 		.post-article {
 			text-align: justify;
@@ -192,24 +196,44 @@ section {
 		.post {
 			margin: 15px 10px;
 		}
-		.post a {
+		.post h2 {
+			display: block;
+			margin-top: 1px;
+			margin-bottom: 10px;
+		}
+		.post i {
+			display: block;
+			margin-top: 15px;
+			font-size: .9rem;
+		}
+		/*.post span {
+			font-size: .9rem;
+		}*/
+		.post p {
+			/*font-size: 1rem;*/
+			line-height: 25px;
+		}
+		.post .post-rm {
 			color: blue;
-			opacity: 0.7;
+			/*opacity: 0.8;*/
 		}
 
 		.filter-cats {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-around;
-			margin-top: 10px;
-			margin-bottom: 60px;
+			margin-top: -20px;
+			margin-bottom: 30px;
 		}
+			.filter-cats form {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
 			.filter-cats input {
 				display: none;
 			}
 			.filter-cats label {
 				display: inline;
-				padding: 15px 62px;
+				padding: 15px 6%;
 				border-color: #938172;
 				border-bottom-style: solid;
 				border-bottom-width: 6px;
@@ -262,15 +286,14 @@ section {
 			line-height: 20px;
 		}
 	.recent-articles {
+		padding: 0 0;
+		margin-right: 6%;
+		flex: 0 25%;
 	}
-
-		.recent-articles .about-me{
+		.recent-articles .about-me {
 			background-color: white;
-			height: 50%;
-			width: 360px;
+			width: 100%;
 			margin-top: 20px;
-			margin-bottom: 20px;
-			margin-left: -58px;
 			padding: 20px 15px;
 		}
 			.about-me p {
@@ -308,20 +331,17 @@ section {
 		.recent-articles .r-posts {
 			background-color: white;
 			height: 50%;
-			width: 360px;
+			width: 100%;
 			margin-top: 20px;
 			margin-bottom: 20px;
-			margin-left: -58px;
 			padding: 20px 15px;
 		}
 
 		.recent-articles .r-categories {
-			margin-top: 20px;
 			background-color: white;
-			width: 360px;
+			width: 100%;
 			margin-top: 20px;
 			margin-bottom: 20px;
-			margin-left: -58px;
 			padding: 20px 15px;
 		}
 			.r-categories input {

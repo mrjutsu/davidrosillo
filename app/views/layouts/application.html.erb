@@ -42,7 +42,7 @@
 							<%= link_to 'Portfolio', portfolios_path, class: "nav-a" %>
 						</strong>
 					</li>
-					<!-- <li>
+					<li>
 						<strong>
 							<%= link_to 'About Me', about_landings_path, class: "nav-a" %>
 						</strong>
@@ -51,16 +51,14 @@
 					<strong>
 						<%= link_to 'Contact', new_contact_path, class: "nav-a"  %>
 					</strong>
-					</li> -->
+					</li>
 					<!-- <i class="fa fa-search"></i> -->
 				</ul>
 			</nav>
 		</section>
 		<section class="content">
-			<!-- <div class="p-body"> -->
-				<%= yield %>
-			<!-- </div> -->
-			<% unless params[:controller] == "portfolios" && params[:action] == "show" %>
+			<%= yield %>
+			<% unless (params[:controller] == "portfolios" && params[:action] == "show") || (params[:controller] == "landings" && params[:action] == "about") %>
 				<div class="recent-articles">
 					<div class="about-me">
 						<div>

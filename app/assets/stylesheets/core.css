@@ -544,6 +544,48 @@ section {
 			border-width: 1px;
 			border-color: #d3d3d3;
 		}
+	.d-about-me {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: white;
+		width: 80%;
+		padding: 20px 20px;
+	}
+	.d-about-me h2 {
+		text-align: center;
+		font-weight: normal;
+	}
+	.wrapper {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-around;
+		margin: 20px 0;
+	}
+		.my-img img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin: 0 20px;
+		}
+		.my-info .social-links {
+			display: block;
+			text-align: center;
+			margin: 10px 0;
+		}
+			#gh-link {
+				color: black;
+			}
+			.my-info .social-links a {
+				display: inline;
+				margin: 0 8%;
+			}
+		.my-info .me-desc {
+			display: block;
+			text-align: justify;
+			font-size: 1.1rem;
+			line-height: 25px;
+		}
 
 /*
 **********************************************

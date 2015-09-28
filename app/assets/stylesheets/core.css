@@ -498,6 +498,52 @@ section {
 		border-radius: 10px;
 		border-color: #626266;
 	}
+	.contact_form form {
+		display: block;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+		.pre-contact h2 {
+			text-align: center;
+			font-weight: normal;
+			margin-bottom: 40px;
+		}
+		.field {
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin: 15px 0;
+		}
+		.field input {
+			width: 80%;
+			font-size: 1.1rem;
+			border-radius: 5px;
+			border-style: solid;
+			border-width: 1px;
+			border-color: #d3d3d3;
+			padding: 10px 20px;
+		}
+		.field textarea {
+			font-size: 1.1rem;
+			padding: 10px 20px;
+			width: 80%;
+			height: 200px;
+			resize: none;
+			border: 1px solid #d3d3d3;
+			border-radius: 5px;
+		}
+		.actions {
+			text-align: center;
+		}
+		.actions input[type="submit"] {
+			padding: 10px 30px;
+			background-color: #d3d3d3;
+			border-radius: 5px;
+			border-style: solid;
+			border-width: 1px;
+			border-color: #d3d3d3;
+		}
 
 /*
 **********************************************

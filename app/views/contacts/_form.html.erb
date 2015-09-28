@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :name, placeholder: "Name" %>
+    <%= f.text_field :name, placeholder: "Name*" %>
   </div>
   <div class="field">
-    <%= f.email_field :email, placeholder: "Email" %>
+    <%= f.email_field :email, placeholder: "Email*" %>
   </div>
   <div class="field">
-    <%= f.text_field :subject, placeholder: "Subject" %>
+    <%= f.text_field :subject, placeholder: "Subject*" %>
   </div>
   <div class="field">
-    <%= f.text_area :body, placeholder: "Tell me what can I help you with" %>
+    <%= f.text_area :body, placeholder: "Tell me what can I help you with*" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Send" %>
   </div>
 <% end %>

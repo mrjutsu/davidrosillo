@@ -3,6 +3,35 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- BEGIN SEO -->
+		<meta name="description" content="<%= params[:controller] == 'posts' && params[:action] == 'show' ? @post.description : '' %>">
+		<meta name="keywords" content="<%= params[:controller] == 'posts' && params[:action] == 'show' ? @post.post_tags.join(',') : '' %>">
+		<meta name="robots" content="index/follow">
+		<link rel="author" href="https://plus.google.com/u/0/+DavidRosillomrjutsu/posts"/>
+		<link rel="canonical" href="https:www.davidrosillo.com"/>
+		<link rel="icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/davidrosillo/favicon.png"/>
+		<!-- fb -->
+		<meta property="og:image" content="https://s3-us-west-2.amazonaws.com/davidrosillo/share-img.jpg"/>
+		<meta property="og:url" content="<%= request.original_url %>"/>
+		<meta property="og:site_name" content="David Rosillo"/>
+		<meta property="og:title" content="<%= params[:controller] == 'posts' && params[:action] == 'show' ? @post.name : (params[:controller] == 'portfolios' && params[:action] == 'show') ? @portfolio.name : 'David Rosillo' %>"/>
+		<meta property="og:type" content="article"/>
+		<meta property="og:description" content="<%= params[:controller] == 'posts' && params[:action] == 'show' ? @post.description : (params[:controller] == 'portfolios' && params[:action] == 'show') ? @portfolio.description : '' %>"/>
+		<!-- twt -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@MrJutsu">
+		<meta name="twitter:creator" content="David Rosillo">
+		<meta name="twitter:title" content="<%= params[:controller] == 'posts' && params[:action] == 'show' ? @post.name : (params[:controller] == 'portfolios' && params[:action] == 'show') ? @portfolio.name : '' %>">
+		<meta name="twitter:url" content="<%= request.original_url %>">
+		<meta name="twitter:image" content="https://s3-us-west-2.amazonaws.com/davidrosillo/share-img.jpg">
+		<meta name="twitter:description" content="<%= params[:controller] == 'posts' && params[:action] == 'show' ? @post.description : (params[:controller] == 'portfolios' && params[:action] == 'show') ? @portfolio.description : '' %>">
+		<!-- g+ -->
+		<meta itemprop="name" content="">
+		<meta itemprop="description" content="<%= params[:controller] == 'posts' && params[:action] == 'show' ? @post.description : (params[:controller] == 'portfolios' && params[:action] == 'show') ? @portfolio.description : '' %>">
+		<meta itemprop="image" content="https://s3-us-west-2.amazonaws.com/davidrosillo/share-img.jpg">
+		<link rel="publisher" href="https://plus.google.com/u/0/+DavidRosillomrjutsu/posts"/>
+		<link rel="icon" type="image/png" href="https://plus.google.com/u/0/+DavidRosillomrjutsu/posts"/>
+		<!-- END SEO -->
 		<title>David Rosillo</title>
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>

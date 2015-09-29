@@ -21,7 +21,7 @@
 	    /* * * CONFIGURATION VARIABLES * * */
 	    var disqus_shortname = 'davidrosillo';
 	    var disqus_identifier = '<%= @portfolio.id %>';
-	    var disqus_url = '<%= url_for( @portfolio, only_path: false ) %>';
+	    var disqus_url = '<%= url_for( request.original_url ) %>';
 	    
 	    /* * * DON'T EDIT BELOW THIS LINE * * */
 	    (function() {

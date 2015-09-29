@@ -569,6 +569,7 @@ section {
 			margin-left: auto;
 			margin-right: auto;
 			margin: 0 20px;
+			border-radius: 10px;
 		}
 		.my-info .social-links {
 			display: block;
@@ -795,6 +796,59 @@ section {
 		border-radius: 10px;
 		border-color: #626266;
 	}
+	.d-about-me {
+		margin: 0 0;
+		width: 100%;
+	}
+		.top-block {
+			display: block;
+			height: 500px;
+		}
+		.my-img {
+			float: none;
+			display: block;
+			overflow: hidden;
+		}
+		.my-img img {
+			display: block;
+			margin: 0 auto;
+			border-radius: 10px;
+			width: 90%;
+		}
+		.top-block .social-links {
+			display: block;
+			margin: 30px 0;
+			margin-bottom: 10px;
+		}
+		.top-block .me-desc {
+			margin: 0 0;
+			font-size: 1.2rem;
+		}
+		.skills-p {
+			margin: 0 0;
+			font-size: 1.2rem;
+			text-align: center;
+		}
+		.skills {
+			display: block;
+			margin: 40px 1%;
+			text-align: center;
+			width: 70%;
+		}
+			.skills li {
+				text-transform: capitalize;
+				font-size: 1.2rem;
+				padding: 5px 0;
+				margin: 25px 0;
+				display: block;
+				border-bottom-style: solid;
+				border-bottom-width: 3px;
+				border-bottom-color: #d3d3d3;
+			}
+		.second-p {
+			font-size: 1.2rem;
+		}
+
 }
 
 @media (min-width: 737px) and (max-width: 1024px) {

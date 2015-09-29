@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :tags
+  resources :tags
   # get 'landing/index'
 
   resources :landings, only: [:index], path: "/" do

@@ -1,5 +1,5 @@
 ActiveAdmin.register Post do
-	permit_params :name, :body, :category_id
+	permit_params :name, :body, :category_id, tags: []
 
 	index title: "Posts" do
 		selectable_column
@@ -19,6 +19,9 @@ ActiveAdmin.register Post do
 		f.inputs @post do
 			f.input :name
 			f.input :category, as: :select, collection: Category.all.map { |x| [x.name,x.id] }
+			f.has_many :tags, allow_destroy: true do |t|
+				t.input :name
+			end
 			f.input :body, as: :html_editor
 		end
 		f.actions

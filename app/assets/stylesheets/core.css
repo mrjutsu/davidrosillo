@@ -271,6 +271,12 @@ section {
 			margin-top: 20px;
 			line-height: 26px;
 		}
+		.post-tags {
+			display: block;
+			margin: 20px 0;
+			font-style: italic;
+			font-size: .9rem;
+		}
 		pre {
 			margin: 20px 0;
 			border-style: solid;
@@ -333,6 +339,9 @@ section {
 			margin-bottom: 20px;
 			padding: 20px 15px;
 		}
+			.r-posts .recent-post span {
+				font-size: 1.1rem;
+			}
 
 		.recent-articles .r-categories {
 			background-color: white;
@@ -949,10 +958,11 @@ section {
 				font-size: .9rem;
 			}
 			.post-body {
-				font-size: 1.2rem;
+				font-size: 1.5rem;
+				line-height: 50px;
 			}
 				.post-body p {
-					line-height: 30px;
+					/*line-height: 30px;*/
 				}
 
 	.portfolios {

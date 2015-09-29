@@ -12,6 +12,12 @@
 		<div class="post-body">
 			<%= @post.body.html_safe %>
 		</div>
+		<div class="post-tags">
+			Tags:
+			<% @post.post_tags.each do |t| %>
+				<span>&nbsp;&nbsp;<%= t %></span>
+			<% end %>
+		</div>
 	</article>
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">

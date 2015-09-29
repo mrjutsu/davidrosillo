@@ -8,9 +8,9 @@
 			<%= post.category.name %>
 		</span>
 	</i>
-	<!-- <span class="post-body"> -->
-		<%= post.body.truncate(500).html_safe %>
-	<!-- </span> -->
+	<p class="post-description">
+		<%= post.description.truncate(500).html_safe %>
+	</p>
 	<p class="post-rm">
 		<strong><%= link_to 'Read More', post_path(post.id) %></strong>
 	</p>

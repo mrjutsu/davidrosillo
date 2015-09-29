@@ -1,5 +1,5 @@
 ActiveAdmin.register Post do
-	permit_params :name, :body, :category_id, tags: []
+	permit_params :name, :body, :description, :category_id, :tags, tags_attributes: [:name]
 
 	index title: "Posts" do
 		selectable_column
@@ -22,6 +22,7 @@ ActiveAdmin.register Post do
 			f.has_many :tags, allow_destroy: true do |t|
 				t.input :name
 			end
+			f.input :description
 			f.input :body, as: :html_editor
 		end
 		f.actions

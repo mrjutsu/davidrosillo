@@ -44,18 +44,23 @@
 				<ul class="nav-btns">
 					<li>
 						<h1>
-							<%= link_to 'David Rosillo', root_path, class: "nav-a" %>
+							<%= link_to 'David Rosillo', root_path, class: "nav-a nav-content" %>
 						</h1>
 					</li>
 					<li>
-						<%= link_to 'Portfolio', portfolios_path, class: "nav-a" %>
+						<%= link_to 'Portfolio', portfolios_path, class: "nav-a nav-content" %>
 					</li>
 					<li>
-						<%= link_to 'About Me', about_landings_path, class: "nav-a" %>
+						<%= link_to 'About Me', about_landings_path, class: "nav-a nav-content" %>
 					</li>
 					<li>
-						<%= link_to 'Contact', new_contact_path, class: "nav-a"  %>
+						<%= link_to 'Contact', new_contact_path, class: "nav-a nav-content"  %>
 					</li>
+					<%= form_tag( search_landings_path, remote: true, id: "search-form", class: "nav-a nav-content" ) do %>
+						<%= hidden_field_tag :authenticity_token, value: form_authenticity_token %>
+						<span class="fa fa-search" id="search-sp"></span>
+						<%= text_field_tag :search, params[:search], placeholder: "Type your search", class: "search-txt", id: "search-input" %>
+					<% end %>
 					<!-- <i class="fa fa-search"></i> -->
 				</ul>
 				<input type="checkbox" class="menu_ck" id="menu_ck">

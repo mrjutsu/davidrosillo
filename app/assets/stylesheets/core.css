@@ -116,19 +116,48 @@ section {
 
 .pre-content {
 	background-color: #020304;
-	flex-wrap: wrap;
+	height: 55px;
 }
-	.nav-btns li {
-		height: 100%;
-		padding: 16px 0;
-	}
-	.nav-a {
-		color: white;
-		padding: 16px 72px;
+	.nav-btns {
+		margin: 0 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: baseline;
+		align-content: space-between;
 	}
 	.nav-btns li:hover:not(:first-child) {
-		background-color: #626266;
+		/*background-color: #626266;*/
+		/*border-bottom-style: solid;
+		border-bottom-width: 4px;
+		border-bottom-color: green;*/
 	}
+	.nav-content {
+		display: block;
+		color: white;
+		padding: 15px 0;
+		flex: 0 20%;
+	}
+	#search-form {
+		position: relative;
+	}
+		#search-form #search-input {
+			color: grey;
+			width: 250px;
+			height: 25px;
+			background: #fcfcfc;
+			border: 1px solid #aaa;
+			border-radius: 20px;
+			box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+			text-indent: 32px;
+		}
+		#search-sp {
+			position: absolute;
+			top: 20px;
+			left: 10px;
+			color: grey;
+		}
+
 	.menu_ck {
 		display: none;
 	}
@@ -167,12 +196,9 @@ section {
 }
 	.p-body {
 		background-color: white;
-		/*width: 60%;*/
-		/*width: 850px;*/
 		margin-top: 20px;
 		margin-bottom: 20px;
 		margin-left: 4%;
-		/*margin-right: 5%;*/
 		padding: 30px 15px;
 		flex: 0 60%;
 	}

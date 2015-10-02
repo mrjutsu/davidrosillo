@@ -1,0 +1,5 @@
+if ( <%= @posts.empty? %> ) {
+	$(".post-article").html("Sorry, no results were found.")
+} else {
+	$(".post-article").html("<%= escape_javascript(render partial: 'posts/posts', collection: @posts, as: :post) %>");
+};

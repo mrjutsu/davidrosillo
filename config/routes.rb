@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :landings, only: [:index], path: "/" do
   	collection do
       post :index
+      post :search
       
   		get :about, path: "/about"
   	end
@@ -26,5 +27,4 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   
   root 'landings#index'
-  # root 'blog#index'
 end

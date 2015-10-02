@@ -8,6 +8,8 @@ class Post < ActiveRecord::Base
 	scope :by_category, -> (category_id) { where(category_id: category_id).order(created_at: :desc) }
 	scope :recent, -> { last(5) }
 
+	scope :search_posts, -> (search) { where("lower(name) LIKE ?","%#{search.downcase}%") }
+
 	def post_tags
 		self.tags.pluck(:name)
 	end

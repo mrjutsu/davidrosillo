@@ -16,6 +16,14 @@ class LandingsController < ApplicationController
 	end
   end
 
+  def search
+  	respond_to do |format|
+  		format.js {
+  			@posts = Post.search_posts(params[:search])
+  		}
+  	end
+  end
+
   def about
   end
 end

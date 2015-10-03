@@ -233,12 +233,10 @@ section {
 			font-size: .9rem;
 		}
 		.post p {
-			/*font-size: 1rem;*/
 			line-height: 25px;
 		}
 		.post .post-rm {
 			color: blue;
-			/*opacity: 0.8;*/
 		}
 
 		.filter-cats {
@@ -268,6 +266,15 @@ section {
 			.filter-cats label:hover:not(.active) {
 				border-color: #AB2222;
 			}
+		.search-results {
+			width: 100%;
+			display: block;
+			margin: 0 auto;
+			margin-top: -20px;
+			margin-bottom: 20px;
+			text-align: center;
+			font-size: 1.2rem;
+		}
 
 	.post-show {
 		margin-top: -20px;

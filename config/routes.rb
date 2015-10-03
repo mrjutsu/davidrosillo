@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       post :index
       post :search
       
+      get :search
   		get :about, path: "/about"
   	end
   end

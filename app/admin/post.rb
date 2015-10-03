@@ -33,6 +33,15 @@ ActiveAdmin.register Post do
 			row :id
 			row :created_at
 			row :name
+			row "Tags" do
+				ul do
+					post.tags.each do |t|
+						li do
+							t.name
+						end
+					end
+				end
+			end
 			row :category
 			row "Body" do
 				raw post.body

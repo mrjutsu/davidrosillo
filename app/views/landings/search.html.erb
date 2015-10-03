@@ -1,0 +1,8 @@
+<div class="p-body">
+	<div class="search-results">
+		<p>Search results for: <strong><%= params[:search] %></strong></p>
+	</div>
+	<div class="post-article">
+		<%= render partial: 'posts/posts', collection: @posts, as: :post %>
+	</div>
+</div>

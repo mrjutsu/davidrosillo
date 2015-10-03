@@ -17,11 +17,18 @@ class LandingsController < ApplicationController
   end
 
   def search
-  	respond_to do |format|
-  		format.js {
-  			@posts = Post.search_posts(params[:search])
-  		}
-  	end
+	words = params[:search].split(' ')
+	words.each do |w|
+		@posts = []
+		q = Post.search_posts(w)
+		@posts += q
+		c = Category.search_posts(w)
+		@posts += c unless c.nil?
+		t = Tag.search_posts(w)
+		@posts += t unless t.nil?
+		@posts.uniq!
+	end
+	render :search
   end
 
   def about

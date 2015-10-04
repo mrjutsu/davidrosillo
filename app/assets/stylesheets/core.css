@@ -717,7 +717,7 @@ section {
 	}
 	.nav-btns li h1 {
 		display: inline-block;
-		line-height: 10px;
+		line-height: 1px;
 		font-size: 1.3rem;
 	}
 	#search-form {

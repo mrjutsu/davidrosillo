@@ -59,9 +59,8 @@
 					<%= form_tag( search_landings_path, id: "search-form", class: "nav-a nav-content" ) do %>
 						<%= hidden_field_tag :authenticity_token, value: form_authenticity_token %>
 						<span class="fa fa-search" id="search-sp"></span>
-						<%= text_field_tag :search, params[:search], placeholder: "Type your search", class: "search-txt", id: "search-input" %>
+						<%= text_field_tag :search, params[:search], placeholder: "Search", class: "search-txt", id: "search-input" %>
 					<% end %>
-					<!-- <i class="fa fa-search"></i> -->
 				</ul>
 				<input type="checkbox" class="menu_ck" id="menu_ck">
 				<label for="menu_ck" class="menu_lb">

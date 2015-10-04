@@ -41,27 +41,7 @@
 	<body>
 		<section class="pre-content">
 			<nav>
-				<ul class="nav-btns">
-					<li>
-						<h1>
-							<%= link_to 'David Rosillo', root_path, class: "nav-a nav-content" %>
-						</h1>
-					</li>
-					<li>
-						<%= link_to 'Portfolio', portfolios_path, class: "nav-a nav-content" %>
-					</li>
-					<li>
-						<%= link_to 'About Me', about_landings_path, class: "nav-a nav-content" %>
-					</li>
-					<li>
-						<%= link_to 'Contact', new_contact_path, class: "nav-a nav-content"  %>
-					</li>
-					<%= form_tag( search_landings_path, id: "search-form", class: "nav-a nav-content" ) do %>
-						<%= hidden_field_tag :authenticity_token, value: form_authenticity_token %>
-						<span class="fa fa-search" id="search-sp"></span>
-						<%= text_field_tag :search, params[:search], placeholder: "Search", class: "search-txt", id: "search-input" %>
-					<% end %>
-				</ul>
+				<%= render partial: 'desktop_header' %>
 				<input type="checkbox" class="menu_ck" id="menu_ck">
 				<label for="menu_ck" class="menu_lb">
 					<i class="fa fa-bars fa-2x"></i>

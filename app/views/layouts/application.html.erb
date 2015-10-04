@@ -41,29 +41,8 @@
 	<body>
 		<section class="pre-content">
 			<nav>
-				<%= render partial: 'desktop_header' %>
-				<input type="checkbox" class="menu_ck" id="menu_ck">
-				<label for="menu_ck" class="menu_lb">
-					<i class="fa fa-bars fa-2x"></i>
-				</label>
-				<ul class="nav-btns-resp">
-					<li>
-						<strong>
-							<%= link_to 'Portfolio', portfolios_path, class: "nav-a" %>
-						</strong>
-					</li>
-					<li>
-						<strong>
-							<%= link_to 'About Me', about_landings_path, class: "nav-a" %>
-						</strong>
-					</li>
-					<li>
-					<strong>
-						<%= link_to 'Contact', new_contact_path, class: "nav-a"  %>
-					</strong>
-					</li>
-					<!-- <i class="fa fa-search"></i> -->
-				</ul>
+				<%= render partial: 'landings/desktop_header' %>
+				<%= render partial: 'landings/resp_header' %>
 			</nav>
 		</section>
 		<section class="content">

@@ -1,0 +1,36 @@
+<div class="resp-icons">
+	<input type="checkbox" class="search_ck" id="search_ck">
+	<label for="search_ck" class="search_lb">
+		<i class="fa fa-search fa-2x"></i>
+	</label>
+	<input type="checkbox" class="menu_ck" id="menu_ck">
+	<label for="menu_ck" class="menu_lb">
+		<i class="fa fa-bars fa-2x"></i>
+	</label>
+</div>
+<ul class="search-resp">
+	<li>
+        <%= form_tag( search_landings_path, id: "search-form-resp", class: "nav-a nav-content" ) do %>
+			<%= hidden_field_tag :authenticity_token, value: form_authenticity_token %>
+			<span class="fa fa-search" id="search-sp-resp"></span>
+			<%= text_field_tag :search, params[:search], placeholder: "Search in the page", class: "search-txt", id: "search-input-resp", autofocus: true %>
+		<% end %>
+	</li>
+</ul>
+<ul class="nav-btns-resp">
+	<li>
+		<strong>
+			<%= link_to 'Portfolio', portfolios_path, class: "resp-a" %>
+		</strong>
+	</li>
+	<li>
+		<strong>
+			<%= link_to 'About Me', about_landings_path, class: "resp-a" %>
+		</strong>
+	</li>
+	<li>
+		<strong>
+			<%= link_to 'Contact', new_contact_path, class: "resp-a"  %>
+		</strong>
+	</li>
+</ul>

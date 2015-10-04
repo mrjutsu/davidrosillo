@@ -2,6 +2,8 @@
 
 	$("#menu_ck").prop('checked',false);
 	$(".nav-btns-resp").hide();
+	$("#search_ck").prop('checked',false);
+	$(".search-resp").hide();
 
 	$("#filter-posts").on("change","input",function(){
 		$("#filter-posts").submit();
@@ -24,6 +26,13 @@
 			$(".nav-btns-resp").hide();
 		} else {
 			$(".nav-btns-resp").show();
+		};
+	});
+	$(".search_lb").on("click",function(){
+		if ( $("#search_ck").prop("checked") ) {
+			$(".search-resp").hide();
+		} else {
+			$(".search-resp").show();
 		};
 	});
 

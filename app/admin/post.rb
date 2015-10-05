@@ -1,5 +1,5 @@
 ActiveAdmin.register Post do
-	permit_params :name, :body, :description, :category_id, :tags, tags_attributes: [:name]
+	permit_params :name, :body, :description, :category_id, :slug, :tags, tags_attributes: [:name]
 
 	index title: "Posts" do
 		selectable_column
@@ -46,6 +46,15 @@ ActiveAdmin.register Post do
 			row "Body" do
 				raw post.body
 			end
+		end
+	end
+
+	controller do
+		def find_resource
+			scoped_collection.friendly.find(params[:id])
+		end
+		def create
+			super
 		end
 	end
 

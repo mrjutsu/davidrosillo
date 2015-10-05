@@ -1,7 +1,7 @@
 <hr>
 <article class="recent-post">
 	<h3>
-		<%= link_to post.name, post_path(post.id) %>
+		<%= link_to post.name, post_path(post.slug) %>
 	</h3>
 	<p>
 		<%= post.body.truncate(200).html_safe %>

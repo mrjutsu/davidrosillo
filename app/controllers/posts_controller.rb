@@ -1,4 +1,5 @@
 class PostsController < InheritedResources::Base
+	before_filter :set_post, only: :show
 
 	def index
 		respond_to do |format|
@@ -17,10 +18,18 @@ class PostsController < InheritedResources::Base
 		end
 	end
 
-  private
+	def show
+		puts @post.inspect
+	end
 
-    def post_params
-      params.require(:post).permit(:name, :body, :category_id)
-    end
+	private
+
+		def set_post
+			@post = Post.friendly.find(params[:id])
+		end
+
+	    def post_params
+	      params.require(:post).permit(:name, :body, :category_id)
+	    end
 end
 

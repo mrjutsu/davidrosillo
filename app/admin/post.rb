@@ -1,5 +1,5 @@
 ActiveAdmin.register Post do
-	permit_params :name, :body, :description, :category_id, :slug, :tags, tags_attributes: [:name]
+	permit_params :name, :body, :description, :category_id, :slug, :gist, :tags, tags_attributes: [:name]
 
 	index title: "Posts" do
 		selectable_column
@@ -24,6 +24,7 @@ ActiveAdmin.register Post do
 			end
 			f.input :description
 			f.input :body, as: :html_editor
+			f.input :gist
 		end
 		f.actions
 	end
@@ -45,6 +46,9 @@ ActiveAdmin.register Post do
 			row :category
 			row "Body" do
 				raw post.body
+			end
+			row "Gist" do
+				raw post.gist
 			end
 		end
 	end

@@ -12,6 +12,11 @@
 		<div class="post-body">
 			<%= @post.body.html_safe %>
 		</div>
+		<% if !@post.gist.nil? %>
+			<h2 class="post-title">TL;DR</h2>
+			<p>Did not read? See the gist instead.</p>
+			<%= @post.gist.html_safe %>
+		<% end %>
 		<div class="post-tags">
 			Tags:
 			<% @post.post_tags.each do |t| %>

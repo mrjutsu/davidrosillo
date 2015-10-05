@@ -59,7 +59,6 @@ ActiveAdmin.register Post do
 		end
 		def create
 			super
-			Post.tweet("Test tweet")
 		end
 	end
 

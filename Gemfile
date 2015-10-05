@@ -18,6 +18,8 @@ gem 'nested_form'
 gem 'active_admin_editor', github: 'mrjutsu/active_admin_editor'
 gem 'figaro'
 gem "font-awesome-rails"
+gem 'aws-sdk', '~> 1'
+gem 'aws-sdk-resources', '~> 2'
 gem "paperclip", "~> 4.3"
 gem 'rails_12factor'
 gem 'friendly_id', '~> 5.1.0'

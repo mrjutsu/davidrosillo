@@ -1,7 +1,9 @@
 <article class="portfolio-article">
   <div class="p-image">
     <%= link_to ( portfolio ) do %>
-      <%= image_tag ( portfolio.avatar.url ) %>
+      <%= image_tag ( portfolio.avatar.url(:medium) ), id: "p-img-desk" %>
+      <%= image_tag ( portfolio.avatar.url(:ipadthumbnail) ), id: "p-img-tablet" %>
+      <%= image_tag ( portfolio.avatar.url(:phonethumb) ), id: "p-img-phone" %>
     <% end %>
   </div>
   <h3>

@@ -16,6 +16,17 @@
 	  <%= @portfolio.description.html_safe %>
 	</div>
 	<a href="<%= @portfolio.url %>" target="_blank" class="go-btn">Check it out!</a>
+	<div class="share-btns">
+		<div>
+			<%= facebook_button %>
+		</div>
+		<div>
+			<%= twitter_button title: "#{@post.name} –" %>
+		</div>
+		<div>
+			<%= google_plus_button %>
+		</div>
+	</div>
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">
 	    /* * * CONFIGURATION VARIABLES * * */

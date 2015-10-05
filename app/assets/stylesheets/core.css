@@ -550,6 +550,12 @@ section {
 		border-radius: 10px;
 		border-color: #626266;
 	}
+	.share-btns {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-around;
+		align-items: center;
+	}
 	.contact_form form {
 		display: block;
 		width: 90%;

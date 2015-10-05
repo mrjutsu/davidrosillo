@@ -17,6 +17,7 @@ p_cats = [
 	{ name: "Ruby" },
 	{ name: "HTML" },
 	{ name: "CSS" },
+	{ name: "Responsive" },
 	{ name: "Android" },
 	{ name: "iOS" },
 ]

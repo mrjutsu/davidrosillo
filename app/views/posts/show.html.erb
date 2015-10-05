@@ -12,7 +12,7 @@
 		<div class="post-body">
 			<%= @post.body.html_safe %>
 		</div>
-		<% if !@post.gist.nil? %>
+		<% if !@post.gist.nil? && !@post.gist.empty? %>
 			<h2 class="post-title">TL;DR</h2>
 			<p>Did not read? See the gist instead.</p>
 			<%= @post.gist.html_safe %>

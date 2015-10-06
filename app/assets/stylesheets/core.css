@@ -861,12 +861,13 @@ section {
 		height: 450px;
 	}
 		.portfolio-article .p-image {
-			height: 50%;
+			height: auto;
+			width: 100%;
 		}
 		#p-img-tablet {
 			display: none;
 		}
-		#p-image-phone {
+		#p-img-phone {
 			display: inherit;
 		}
 		#p-img-desk {

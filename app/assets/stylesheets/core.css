@@ -319,17 +319,21 @@ section {
 			font-style: italic;
 			font-size: .9rem;
 		}
-		pre {
+		/*pre {
+			width: 85%;
 			margin: 20px 0;
 			border-style: solid;
 			border-width: 1px;
-			border-color: grey;
+			border-color: black;
 		}
 		pre code {
 			display: block;
-			margin: 5px 5px;
+			width: 100%;
+			color: grey;
+			display: block;
+			margin: 5px 20px;
 			line-height: 20px;
-		}
+		}*/
 	.recent-articles {
 		padding: 0 0;
 		margin-right: 6%;

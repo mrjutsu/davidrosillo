@@ -2,6 +2,10 @@ class Post < ActiveRecord::Base
 	extend FriendlyId
 	friendly_id :name, use: :slugged
 
+	after_save do
+		self.clear_duplicates
+	end
+
 	belongs_to :category
 
 	has_many :tags, dependent: :destroy
@@ -16,4 +20,13 @@ class Post < ActiveRecord::Base
 	def post_tags
 		self.tags.pluck(:name)
 	end
+
+	def clear_duplicates
+	    tags = self.tags
+	    grouped = tags.group_by { |c| [c.name] }
+	    grouped.values.each do |g|
+	      first = g.shift
+	      g.each { |doble| doble.destroy }
+	    end
+	  end
 end

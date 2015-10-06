@@ -1,5 +1,7 @@
 <div class="portfolio-img">
-	<%= image_tag( @portfolio.avatar.url ) %>
+	<%= image_tag ( @portfolio.avatar.url ), id: "p-img-show-desk" %>
+	<%= image_tag ( @portfolio.avatar.url(:ipadshow) ), id: "p-img-show-tablet" %>
+	<%= image_tag ( @portfolio.avatar.url(:phoneshow) ), id: "p-img-show-phone" %>
 </div>
 <article class="portfolio-show">
 	<h2>

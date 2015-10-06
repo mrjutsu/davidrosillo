@@ -23,7 +23,7 @@ ActiveAdmin.register Post do
 				t.input :name
 			end
 			f.input :description
-			f.input :body, as: :html_editor
+			f.input :body, as: :ckeditor
 			f.input :gist
 		end
 		f.actions

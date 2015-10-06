@@ -16,6 +16,7 @@ gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'nested_form'
 gem 'active_admin_editor', github: 'mrjutsu/active_admin_editor'
+gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'figaro'
 gem "font-awesome-rails"
 gem 'aws-sdk', '~> 1'

@@ -2,7 +2,7 @@ class LandingsController < ApplicationController
   def index
   	respond_to do |format|
 		format.html {
-			@posts = Post.all.order(created_at: :desc)
+			@posts = Post.all.order(created_at: :desc).page(params[:page])
 			render :index
 		}
 		format.js {

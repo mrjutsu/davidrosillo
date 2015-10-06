@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
 	extend FriendlyId
 	friendly_id :name, use: :slugged
+	paginates_per 7
 
 	after_save do
 		self.clear_duplicates

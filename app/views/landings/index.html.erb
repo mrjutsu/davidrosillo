@@ -22,5 +22,6 @@
   </div>
   <div class="post-article">
     <%= render partial: 'posts/posts', collection: @posts, as: :post %>
+    <%= paginate @posts %>
   </div>
 </div>

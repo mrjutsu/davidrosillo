@@ -26,6 +26,7 @@ gem 'rails_12factor'
 gem 'friendly_id', '~> 5.1.0'
 gem 'shareable'
 gem 'kaminari'
+gem 'puma'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

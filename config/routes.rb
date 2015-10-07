@@ -13,13 +13,13 @@ Rails.application.routes.draw do
   	end
   end
 
-  resources :contacts, only: [:new,:create], path: "/contact"
+  resources :contacts, only: [:index,:new,:create], path: "/contact"
   resources :portfolios, only: [:index,:show], path: "/portfolio" do
     collection do
       post :index
     end
   end
-  resources :posts, only: [:index,:show], path: "/blog/" do
+  resources :posts, only: [:index,:show], path: "/" do
     collection do
       post :index
     end

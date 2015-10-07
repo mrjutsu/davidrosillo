@@ -11,7 +11,7 @@
 		<%= link_to 'About Me', about_landings_path, class: "nav-a nav-content" %>
 	</li>
 	<li>
-		<%= link_to 'Contact', new_contact_path, class: "nav-a nav-content"  %>
+		<%= link_to 'Contact', contacts_path, class: "nav-a nav-content"  %>
 	</li>
 	<%= form_tag( search_landings_path, id: "search-form", class: "nav-a nav-content" ) do %>
 		<%= hidden_field_tag :authenticity_token, value: form_authenticity_token %>

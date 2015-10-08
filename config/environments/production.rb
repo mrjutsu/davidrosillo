@@ -89,4 +89,8 @@ Rails.application.configure do
     :password  => ENV["MANDRILL_PASSWORD"], # SMTP password is any valid API key
     :authentication => 'login' # Mandrill supports 'plain' or 'login'
   }
+  
+  config.action_dispatch.default_headers = {
+    'X-Frame-Options' => 'ALLOWALL'
+  }
 end
